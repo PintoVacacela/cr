@@ -1,94 +1,112 @@
-{
+
     [
         {
             "code":200,
-            "description":"OK",
+            "data":{"description":"OK",
             "type":"Success"
+            }
+            
         },
         {
             "code":201,
-            "description":"Created",
+            "data":{"description":"Created",
             "type":"Success"
+            }
         },
         {
             "code":202,
-            "description":"Accepted",
+            "data":{"description":"Accepted",
             "type":"Success"
+            }
         },
         {
             "code":204,
-            "description":"No Content",
+            "data":{"description":"No Content",
             "type":"Success"
+            }
         },
         {
             "code":301,
-            "description":"Moved Permanently",
+            "data":{"description":"Moved Permanently",
             "type":"Redirection"
+            }
         },
         {
             "code":302,
-            "description":"Found",
+            "data":{"description":"Found",
             "type":"Redirection"
+            }
         },
         {
             "code":304,
-            "description":"Not Modified",
+            "data":{"description":"Not Modified",
             "type":"Redirection"
+            }
         },
         {
             "code":400,
-            "description":"Bad Request",
+            "data":{"description":"Bad Request",
             "type":"Client_Errors"
+            }
         },
         {
             "code":401,
-            "description":"Unauthorized",
+            "data":{"description":"Unauthorized",
             "type":"Client_Errors"
+            }
         },
         {
             "code":403,
-            "description":"Forbidden",
+            "data":{"description":"Forbidden",
             "type":"Client_Errors"
+            }
         },
         {
             "code":404,
-            "description":"Not Found",
+            "data":{"description":"Not Found",
             "type":"Client_Errors"
+            }
         },
         {
             "code":405,
-            "description":"Method Not Allowed",
+            "data":{"description":"Method Not Allowed",
             "type":"Client_Errors"
+            }
         },
         {
             "code":408,
-            "description":"Request Timeout",
+            "data":{"description":"Request Timeout",
             "type":"Client_Errors"
+            }
         },
         {
             "code":500,
-            "description":"Internal Server Error",
+            "data":{"description":"Internal Server Error",
             "type":"Server_Errors"
+            }
         },
         {
             "code":501,
-            "description":"Not Implemented",
+            "data":{"description":"Not Implemented",
             "type":"Server_Errors"
+            }
         },
         {
             "code":502,
-            "description":"Bad Gateway",
+            "data":{"description":"Bad Gateway",
             "type":"Server_Errors"
+            }
         },
         {
             "code":503,
-            "description":"Service Unavailable",
+            "data":{"description":"Service Unavailable",
             "type":"Server_Errors"
+            }
         },
         {
             "code":504,
-            "description":"Gateway Timeout",
+            "data":{"description":"Gateway Timeout",
             "type":"Server_Errors"
+            }
         }
     ]
-}

@@ -11,9 +11,14 @@ class UserState(enum.Enum):
     INACTIVO = 2
     REGISTRADO = 3
 
+class TypeState(enum.Enum):
+    ACTIVO = 1
+    INACTIVO = 2
+
 class ApplicationUser(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(100))
+    username = db.Column(db.String(100))
     lastname = db.Column(db.String(100))     
     documentType_id = db.Column(db.Integer, db.ForeignKey("document_type.id"))
     documentType = db.relationship("DocumentType", back_populates="users")
@@ -28,13 +33,13 @@ class ApplicationUser(db.Model):
 class UserType(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     nombre = db.Column(db.String(50))
-    state = db.Column(db.Boolean, default=True, nullable=False)
+    state = db.Column(db.Enum(TypeState), default='ACTIVO')
     users = db.relationship('ApplicationUser')
 
 class DocumentType(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(50))
-    state = db.Column(db.Boolean, default=True, nullable=False)
+    state = db.Column(db.Enum(TypeState), default='ACTIVO')
     users = db.relationship('ApplicationUser')
 
 

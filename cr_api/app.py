@@ -19,7 +19,7 @@ cors = CORS(app)
 
 api = Api(app)
 
-api.add_resource(Register, '/api/userRegister')
+api.add_resource(Login, '/api/login')
 api.add_resource(Users, '/api/users')
 api.add_resource(User, '/api/user/<string:id_usuario>')
 
