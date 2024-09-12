@@ -10,27 +10,37 @@ class WebResponse:
 
     def performResponse(self, code, message):
         data = self._getDataResponse(code)
+        reponse = any
         if data is not None:
-            return {'code':code,
+            reponse = {'code':code,
                     'message':message,
                     'description':data.get("description"),
                     'type':data.get("type")
                     }, code
+            self.log.info(None,reponse)
+            return reponse
         else:
-            return {'message':message},code
+            reponse ={'message':message},code
+            self.log.info(None,reponse)
+            return reponse
     
-    def performResponse(self, code, message, token):
+    def performTokenResponse(self, code, message, token):
         data = self._getDataResponse(code)
         if data is not None:
-            return {'code':code,
+
+            response = {'code':code,
                     'message':message,
                     'description':data.get("description"),
                     'type':data.get("type"),
                     'token':token
                     }, code
+            self.log.info(None,response)
+            return response
         else:
-            return {'message':message},code
-    
+            reponse ={'message':message},code
+            self.log.info(None,reponse)
+            return reponse
+        
     def _getDataResponse(self, code):
         try:
             with open('api/utilities/responses/err_codes.json') as arch:

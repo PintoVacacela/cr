@@ -67,11 +67,6 @@ class Logger:
             trace = traceback.format_exc()
         self.logger.error(f"User: {user} On: {self.clazz} : An error occurred: {exc} : {trace}")
 
-
-    def errorInfo(self, user, msg:str):
-        if exc is None:
-            exc = 'Not found exception'
-        self.logger.error(f"User: {user} On: {self.clazz} : {msg}")
     
 
 
