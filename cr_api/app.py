@@ -1,12 +1,16 @@
 from api import create_app
-
+from api.model import db
 from flask_jwt_extended import JWTManager
 from flask_restful import Api
 from flask_cors import CORS
-from api.model import db
 from api.components.user.user_logic import *
 from api.components.client.client_logic import *
+from api.components.menu.menu_logic import *
+from api.components.profile.profile_logic import *
+from api.utilities.uploaded_files import *
+from api import UPLOAD_FOLDER
 
+import os
 
 app = create_app()
 app_context = app.app_context()
@@ -20,10 +24,39 @@ cors = CORS(app)
 
 api = Api(app)
 
-api.add_resource(Login, '/api/login')
-api.add_resource(Users, '/api/users')
-api.add_resource(User, '/api/user/<string:id_usuario>')
-api.add_resource(Clients, '/api/clients')
+api.add_resource(LoginView, '/api/login')
+
+api.add_resource(UsersView, '/api/users')
+api.add_resource(UserView, '/api/user/<string:id_user>')
+
+api.add_resource(ClientsView, '/api/clients')
+
+api.add_resource(AppMenus, '/api/menus')
+
+api.add_resource(ProfilesView, '/api/profiles')
+api.add_resource(ProfileView, '/api/profile/<string:id_profile>')
+
+api.add_resource(DocumentTypesView, '/api/document_types')
+api.add_resource(DocumentTypeView, '/api/document_type/<string:id_document>')
+
+api.add_resource(UserTypesView, '/api/user_types')
+api.add_resource(UserTypeView, '/api/user_type/<string:id_type>')
+
+api.add_resource(ClientsView, '/api/clients')
+
+
+api.add_resource(ContificoClientsView, '/api/usercontifico_clients')
+
+
+
+
+# api.add_resource(UploadView, '/uploads/<string:file_name>')
+
+@app.route('/uploads/<path:filename>', methods=['GET'])
+def uploaded_file(filename):
+    print(filename)
+    return send_from_directory(UPLOAD_FOLDER, filename)
+
 
 jwt = JWTManager(app)
 

@@ -18,11 +18,26 @@ class UserCreateValidation:
             isValid = True
             response = "Success"   
         elif new_user.email == email:
-            response = "Email ya existe!"
+            response = "Email de usuario ya existe!"
         elif new_user.username == username:
-            response = "Identificacion ya existe!"
-        elif new_user.identification == identification:
             response = "Nombre de usuario ya existe!"
+        elif new_user.identification == identification:
+            response = "Identificacion de usuario ya existe!"
+        return ValidationResponse(isValid,response)
+    
+    @staticmethod 
+    def validateExistenceUserUpdate(id,username,email,identification):
+        isValid = False
+        new_user = UserManager().findRegisteredUserWithoutId(id,username,email,identification)
+        if new_user is None:
+            isValid = True
+            response = "Success"   
+        elif new_user.email == email:
+            response = "Email de usuario ya existe!"
+        elif new_user.username == username:
+            response = "Nombre de usuario ya existe!"
+        elif new_user.identification == identification:
+            response = "Identificacion de usuario ya existe!"
         return ValidationResponse(isValid,response)
 
 
@@ -31,29 +46,53 @@ class UserCreateValidation:
     def validateUserData(user: ApplicationUser):
         response = any
         isValid = False
-        if user.name is None :
+        if  FormatValidator.isNullOrEmpty(user.name):
             response = "Nombre invalido!"
             return ValidationResponse(isValid,response)
-        if user.lastname is None:
+        if FormatValidator.isNullOrEmpty(user.lastname):
             response = "Apellido invalido!"
             return ValidationResponse(isValid,response)
-        if user.username is None  :
+        if FormatValidator.isNullOrEmpty(user.username) :
             response = "Nombre de usuario invalido!"
             return ValidationResponse(isValid,response)
-        if user.email is None  :
+        if FormatValidator.isNullOrEmpty(user.email) :
             response = "Email de usuario invalido!"
             return ValidationResponse(isValid,response)
-        if user.documentType_id is None:
+        if FormatValidator.isNullOrEmpty(user.documentType_id):
             response = "Tipo de documento de usuario invalido!"
             return ValidationResponse(isValid,response)
-        if user.identification is None  :
+        if FormatValidator.isNullOrEmpty(user.identification):
             response = "Identificacion de usuario invalido!"
             return ValidationResponse(isValid,response)
-        if user.password is None  :
+        if FormatValidator.isNullOrEmpty(user.password):
             response = "Contraseña de usuario invalido!"
             return ValidationResponse(isValid,response)
-        if user.userType_id is None  :
+        if FormatValidator.isNullOrEmpty(user.userType_id):
             response = "Tipo de usuario invalido!"
+            return ValidationResponse(isValid,response)
+        isValid = True
+        response = "Success!"
+        return ValidationResponse(isValid,response)
+    
+
+    @staticmethod
+    def validateDocumentData(document: DocumentType):
+        response = any
+        isValid = False
+        if FormatValidator.isNullOrEmpty(document.name):
+            response = "Nombre invalido!"
+            return ValidationResponse(isValid,response)
+        isValid = True
+        response = "Success!"
+        return ValidationResponse(isValid,response)
+    
+
+    @staticmethod
+    def validateUserTypeData(type: UserType):
+        response = any
+        isValid = False
+        if FormatValidator.isNullOrEmpty(type.name):
+            response = "Nombre invalido!"
             return ValidationResponse(isValid,response)
         isValid = True
         response = "Success!"

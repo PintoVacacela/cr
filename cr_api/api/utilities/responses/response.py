@@ -23,6 +23,23 @@ class WebResponse:
             reponse ={'message':message},code
             self.log.info(None,reponse)
             return reponse
+        
+    def performResponseObject(self, code, message, object):
+        data = self._getDataResponse(code)
+        reponse = any
+        if data is not None:
+            reponse = {'code':code,
+                    'message':message,
+                    'description':data.get("description"),
+                    'type':data.get("type"),
+                    'object':object
+                    }, code
+            self.log.info(None,reponse)
+            return reponse
+        else:
+            reponse ={'message':message},code
+            self.log.info(None,reponse)
+            return reponse
     
     def performTokenResponse(self, code, message, token):
         data = self._getDataResponse(code)

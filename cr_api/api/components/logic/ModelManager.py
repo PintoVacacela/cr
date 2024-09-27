@@ -43,9 +43,23 @@ class ModelManager:
             self.log.errorExc(None,e,traceback)
             return None
         
+    def findActives(self):
+        try:
+            return self.model.query.filter(self.model.state == 'ACTIVO').all()
+        except Exception as e:
+            self.log.errorExc(None,e,traceback)
+            return None
+        
     def findById(self,id_object):
         try:
             return self.model.query.filter(self.model.id == id_object).first()
+        except Exception as e:
+            self.log.errorExc(None,e,traceback)
+            return None
+        
+    def findByName(self,name):
+        try:
+            return self.model.query.filter(self.model.name == name).first()
         except Exception as e:
             self.log.errorExc(None,e,traceback)
             return None

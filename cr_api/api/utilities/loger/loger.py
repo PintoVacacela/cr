@@ -54,6 +54,10 @@ class Logger:
     def info(self, user, msg):
         self.logger.info(f"User: {user} On: {self.clazz} : {msg}")
 
+
+    def error(self, user, msg):
+        self.logger.error(f"User: {user} On: {self.clazz} : {msg}")
+
         
     
     def errorExc(self, user, exc:str, traceback:any):

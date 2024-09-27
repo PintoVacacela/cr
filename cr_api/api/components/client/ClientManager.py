@@ -13,6 +13,14 @@ class ClientManager (ModelManager):
         self.path = self.contifico_config["contifico_url"]
         self.key = self.contifico_config["contifico_key"]
 
+    def findRegisteredClient(self,cedula):
+        try:
+            search = self.model.query.filter(self.model.cedula == cedula).first()
+            return search
+        except Exception as e:
+            self.log.errorExc(None,e,traceback)
+            return None
+
     def getClientData(self):
         try:
             headers = {
