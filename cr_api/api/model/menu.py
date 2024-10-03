@@ -9,5 +9,6 @@ class ApplicationMenu(BasicModel):
     code_parent = db.Column(db.String(4))
     position = db.Column(db.Integer)
     route = db.Column(db.String(100))
+    profiles = db.relationship('Profile', secondary='profile_menus', back_populates='menus')
 
 

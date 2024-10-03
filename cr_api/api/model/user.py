@@ -33,6 +33,7 @@ class ApplicationUser(BasicModel):
 class UserType(BasicModel):
     name = db.Column(db.String(50))
     users = db.relationship('ApplicationUser')
+    profiles = db.relationship('Profile', secondary='profile_user_types', back_populates='userTypes')
 
 class DocumentType(BasicModel):
     name = db.Column(db.String(50))

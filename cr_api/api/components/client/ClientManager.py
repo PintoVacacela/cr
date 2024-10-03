@@ -32,7 +32,7 @@ class ClientManager (ModelManager):
             db.session.commit()
             for client in clients_json:
                  new_client = Client(
-                        id=client.get("id"),
+                        id_client=client.get("id"),
                         ruc=client.get("ruc"),
                         cedula=client.get("cedula"),
                         placa=client.get("placa"),

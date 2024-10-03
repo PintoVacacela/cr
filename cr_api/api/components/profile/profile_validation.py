@@ -37,11 +37,19 @@ class ProfileCreateValidation:
         if menus is None:
             response = "No hay accesos para el perfil!"
             return ValidationResponse(isValid,response)
-        menus = list(menus)
-        if menus.__len__<=0:
+        if not menus:
             response = "No hay accesos para el perfil!"
             return ValidationResponse(isValid,response)
         isValid = True
         response = "Success!"
         return ValidationResponse(isValid,response)
 
+    @staticmethod 
+    def validateDeleteProfile(id_profile):
+        users = ApplicationUser.query.filter(ApplicationUser.profile_id == id_profile).all()
+        isValid = True
+        response = "Success!"
+        if len(users) > 0:
+            isValid = False
+            response = "No se puede eliminar el perfil, existen usuarios asociados!"
+        return ValidationResponse(isValid,response)

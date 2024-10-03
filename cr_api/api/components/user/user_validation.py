@@ -1,4 +1,5 @@
 from ...model.user import *
+from ...model.profile import *
 from ...utilities.responses import *
 from ...utilities.loger import *
 from .UserManager import *
@@ -96,4 +97,30 @@ class UserCreateValidation:
             return ValidationResponse(isValid,response)
         isValid = True
         response = "Success!"
+        return ValidationResponse(isValid,response)
+    
+    @staticmethod 
+    def validateDeleteDocument(id_document):
+        users = ApplicationUser.query.filter(ApplicationUser.documentType_id == id_document).all()
+        isValid = True
+        response = "Success!"
+        if len(users) > 0:
+            isValid = False
+            response = "No se puede eliminar el tipo de documento, existen usuarios asociados!"
+        return ValidationResponse(isValid,response)
+
+    @staticmethod 
+    def validateDeleteUserType(id_type):
+        users = ApplicationUser.query.filter(ApplicationUser.userType_id == id_type).all()
+        isValid = True
+        response = "Success!"
+        if len(users) > 0:
+            isValid = False
+            response = "No se puede eliminar el tipo de usuario, existen usuarios asociados!"
+
+        profiles = ProfileUserTypes.query.filter(ProfileUserTypes.user_type_id == id_type).all()
+        if len(profiles) > 0:
+            isValid = False
+            response = "No se puede eliminar el tipo de usuario, existen perfiles asociados!"
+        
         return ValidationResponse(isValid,response)

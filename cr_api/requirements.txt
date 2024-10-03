@@ -29,3 +29,4 @@ password-strength==0.0.3.post2
 requests==2.26.0
 Werkzeug==2.0.1
 pyodbc
+flask-socketio

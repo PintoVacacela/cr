@@ -7,7 +7,7 @@ from ...utilities.responses import *
 from ...utilities.loger import *
 from .user_validation import *
 from ..logic.ModelManager import *
-from ...schemas.user_schema import *
+from ...schemas.model_schema import *
 from ...utilities.uploaded_files import * 
 from ...utilities.customized.FormatValidation import *
 
@@ -31,6 +31,11 @@ class LoginView(Resource):
         self.log = LoggerFactory().get_logger(self.__class__)
         self.manager = UserManager()
 
+    @jwt_required()
+    def get(self):
+        acces_id = get_jwt_identity()
+        return user_schema.dump(self.manager.findById(acces_id))
+
     def post(self):
         response = any
         username = request.form.get("username")  
@@ -52,7 +57,7 @@ class UsersView(Resource):
         self.log = LoggerFactory().get_logger(self.__class__)
         self.manager = UserManager()
 
-    
+    @jwt_required()
     def get(self):
         users = self.manager.findAll()
         return [user_schema.dump(item) for item in users],200
@@ -64,12 +69,14 @@ class UsersView(Resource):
         lastname = request.form.get("lastname")  
         username = request.form.get("username")  
         email = request.form.get("email") 
+        designation = request.form.get("designation") 
         phone_number = request.form.get("phone_number") 
         documentType_id = request.form.get('documentType_id')
         identification = request.form.get("identification")  
         password = request.form.get("password")  
         userType_id = request.form.get("userType_id")  
         profile_id = request.form.get("profile_id") 
+        state = request.form.get("state")
         photo_url = None
         
         new_user = ApplicationUser(
@@ -77,13 +84,15 @@ class UsersView(Resource):
             lastname=lastname,
             username=username,
             email=email,
+            designation=designation,
             phone_number=phone_number,
             documentType_id=documentType_id,
             identification=identification,
             password=password,
             userType_id=userType_id,
             photo_url=photo_url,
-            profile_id=profile_id
+            profile_id=profile_id,
+            state=state
         )
         response = any
         validation = validator.validateUserData(new_user)
@@ -148,7 +157,7 @@ class UserView(Resource):
         password = request.form.get("password")  
         userType_id = request.form.get("userType_id")  
         profile_id = request.form.get("profile_id") 
-        
+        state = request.form.get("state")
 
         user.name = name if not FormatValidator.isNullOrEmpty(name) else user.name
         user.lastname = lastname if not FormatValidator.isNullOrEmpty(lastname) else user.lastname
@@ -161,6 +170,8 @@ class UserView(Resource):
         user.password = password if not FormatValidator.isNullOrEmpty(password) else user.password
         user.userType_id = userType_id if not FormatValidator.isNullOrEmpty(userType_id) else user.userType_id
         user.profile_id = profile_id if not FormatValidator.isNullOrEmpty(profile_id) else user.profile_id
+        user.state = state if not FormatValidator.isNullOrEmpty(state) else user.state
+
         photo_url = None
         
         validation = validator.validateUserData(user)
@@ -227,6 +238,9 @@ class DocumentTypeView(Resource):
     def delete(self, id_document):
         acces_id = get_jwt_identity()
         document = self.manager.findById(id_document)
+        validation = validator.validateDeleteDocument(id_document)
+        if not validation.isValid:
+            return response_util.performResponse(404,validation.response)
         if document is None:
             return response_util.performResponse(404,"No se puede encontrar el tipo de documento!")
         self.manager.delete(document)
@@ -243,8 +257,8 @@ class DocumentTypeView(Resource):
 
         name = request.form.get("name")  
         state = request.form.get("state")
-        document.name = name if name is not None else document.name
-        document.state = state if state is not None else document.state
+        document.name = name if not FormatValidator.isNullOrEmpty(name) else document.name
+        document.state = state if not FormatValidator.isNullOrEmpty(state) else document.state
         validation = validator.validateDocumentData(document)
         if validation.isValid:
             self.manager.put()
@@ -300,6 +314,9 @@ class UserTypeView(Resource):
     def delete(self, id_type):
         acces_id = get_jwt_identity()
         type = self.manager.findById(id_type)
+        validation = validator.validateDeleteUserType(id_type)
+        if not validation.isValid:
+            return response_util.performResponse(404,validation.response)
         if type is None:
             return response_util.performResponse(404,"No se puede encontrar el tipo de usuario!")
         self.manager.delete(type)
@@ -316,8 +333,8 @@ class UserTypeView(Resource):
 
         name = request.form.get("name")  
         state = request.form.get("state")
-        type.name = name if name is not None else type.name
-        type.state = state if state is not None else type.state
+        type.name = name if not FormatValidator.isNullOrEmpty(name) else type.name
+        type.state = state if not FormatValidator.isNullOrEmpty(state) else type.state
 
         validation = validator.validateUserTypeData(type)
         if validation.isValid:
@@ -330,3 +347,58 @@ class UserTypeView(Resource):
     
 
 
+class UserConfigView(Resource):
+    def __init__(self):
+        self.manager = UserManager()
+        self.log = LoggerFactory().get_logger(self.__class__)
+    
+    @jwt_required()
+    def put(self):
+        acces_id = get_jwt_identity()
+        user = self.manager.findById(acces_id)
+        if user is None:
+            return response_util.performResponse(404,"No se puede encontrar el usuario!")
+        
+        passwordActual = request.form.get("passwordActual")  
+        passwordNew = request.form.get("passwordNew")
+        passwordConfirmation = request.form.get("passwordConfirmation")
+        response = None
+        if FormatValidator.isNullOrEmpty(passwordActual):
+            response = response_util.performResponse(400,"No se ingreso la contraseña actual!")
+            return response
+
+        if FormatValidator.isNullOrEmpty(passwordNew):
+            response = response_util.performResponse(400,"No se ingreso la contraseña nueva!")
+            return response
+
+        if FormatValidator.isNullOrEmpty(passwordConfirmation):
+            response = response_util.performResponse(400,"No se confirmó la contraseña nueva!")
+            return response
+        
+        if user.password != passwordActual:
+            response = response_util.performResponse(400,"No se ingreso la contraseña actual!")
+            return response
+
+        if user.password == passwordNew:
+            response = response_util.performResponse(400,"La contraseña debe ser distinta!")
+            return response
+
+        if passwordNew != passwordConfirmation:
+            response = response_util.performResponse(400,"Las contraseñas nuevas deben coincidir!")
+            return response
+        
+        user.password = passwordNew
+        photo_url = None
+        
+        if 'photo' in request.files:
+            photo = request.files['photo']
+            photo_url = UploadUtils.savePhoto(photo,'user')
+            if user.photo_url is not None:
+                UploadUtils.delete_image(user.photo_url)
+            user.photo_url = photo_url
+        response = response_util.performResponse(200,"Usuario actualizado exitosamente!")
+        self.manager.put()
+        self.log.info(acces_id,response)
+        return response
+        
+    

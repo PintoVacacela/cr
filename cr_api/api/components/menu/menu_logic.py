@@ -4,7 +4,8 @@ from email_validator import validate_email, EmailNotValidError
 from flask_jwt_extended import jwt_required, create_access_token, get_jwt_identity
 from ...model.menu import *
 from ..logic.ModelManager import *
-from ...schemas.menu_schema import * 
+from ...schemas.model_schema import * 
+from ..user.UserManager import *
 import json
 
 
@@ -30,18 +31,33 @@ def buildMenu(menus):
 
 
 
-class AppMenus(Resource):
+class UserMenusView(Resource):
+    def __init__(self):
+        self.manager = UserManager()
+        self.log = LoggerFactory().get_logger(self.__class__)
+
+    @jwt_required()
+    def get(self):
+        acces_id = get_jwt_identity()
+        user = self.manager.findById(acces_id)
+        if user and user.profile:
+            menus = user.profile.menus
+            response = [menu_schema.dump(menu) for menu in menus]
+            return buildMenu(response),200
+        
+        return response_util.performResponse(404,"No se puede encontrar los menus del usuario!")
+
+
+        
+    
+class MenusView(Resource):
     def __init__(self):
         self.manager = ModelManager(ApplicationMenu)
 
     @jwt_required()
     def get(self):
-        current_user = get_jwt_identity()
-        print(current_user)
-        menus = self.manager.findAll()
-        print(menus)
+        menus = self.manager.findActives()
         response = [menu_schema.dump(menu) for menu in menus]
-        
         return buildMenu(response),200
     
    

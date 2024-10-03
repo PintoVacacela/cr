@@ -6,7 +6,7 @@ from ...model.client import *
 from ...utilities.responses import *
 from ...utilities.loger import *
 from .ClientManager import *
-from ...schemas.client_schema import *
+from ...schemas.model_schema import *
 from .client_validation import *
 
 
@@ -14,7 +14,7 @@ client_schema = ClientSchema()
 validator = ClientValidation()
 
 
-class ContificoClientsView:
+class ContificoClientsView(Resource):
     def __init__(self):
         self.log = LoggerFactory().get_logger(self.__class__)
         self.manager = ClientManager()
@@ -25,6 +25,23 @@ class ContificoClientsView:
         if clients:
             return clients,200
         return response_util.performResponse(404,"No se pudo obtener la lista!")
+
+
+class PaymentTypeView(Resource):
+    @jwt_required()
+    def get(self):
+        obj = []
+        for k in PaymentType:
+            obj.append({"key":k.name, "value":k.value})
+        return obj
+    
+class ClientTypeView(Resource):
+    @jwt_required()
+    def get(self):
+        obj = []
+        for k in ClientType:
+            obj.append({"key":k.name, "value":k.value})
+        return obj
 
 
 class ClientsView(Resource):
