@@ -1,5 +1,6 @@
 from ...model import db
 from ...utilities.responses import *
+from sqlalchemy.orm import sessionmaker
 
 
 response_util = WebResponse()
@@ -9,6 +10,8 @@ class ModelManager:
     def __init__(self, model):
         self.model = model
         self.log = LoggerFactory().get_logger(self.__class__)
+        Session = sessionmaker()
+        self.session = Session()
 
     def create(self,new_object):
         try:

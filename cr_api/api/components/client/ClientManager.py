@@ -6,7 +6,6 @@ import requests
 class ClientManager (ModelManager):
 
     def __init__(self):
-        
         super().__init__(Client)
         with open('api/utilities/contifico/config.json') as arch:
                 self.contifico_config = json.load(arch)
@@ -33,41 +32,91 @@ class ClientManager (ModelManager):
             for client in clients_json:
                  new_client = Client(
                         id_client=client.get("id"),
+                        type=client.get("tipo"),
                         ruc=client.get("ruc"),
-                        cedula=client.get("cedula"),
-                        placa=client.get("placa"),
-                        razon_social=client.get("razon_social"),
-                        telefonos=client.get("telefonos"),
-                        direccion=client.get("direccion"),
-                        tipo=client.get("tipo"),
-                        es_cliente=client.get("es_cliente"),
-                        es_proveedor=client.get("es_proveedor"),
-                        es_empleado=client.get("es_empleado"),
-                        es_corporativo=client.get("es_corporativo"),
-                        aplicar_cupo=client.get("aplicar_cupo"),
-                        email=client.get("email"),
-                        es_vendedor=client.get("es_vendedor"),
-                        es_extranjero=client.get("es_extranjero"),
-                        porcentaje_descuento=client.get("porcentaje_descuento"),
-                        adicional1_cliente=client.get("adicional1_cliente"),
-                        adicional2_cliente=client.get("adicional2_cliente"),
-                        adicional3_cliente=client.get("adicional3_cliente"),
-                        adicional4_cliente=client.get("adicional4_cliente"),
-                        adicional1_proveedor=client.get("adicional1_proveedor"),
-                        adicional2_proveedor=client.get("adicional2_proveedor"),
-                        adicional3_proveedor=client.get("adicional3_proveedor"),
-                        adicional4_proveedor=client.get("adicional4_proveedor"),
-                        banco_codigo_id=client.get("banco_codigo_id"),
-                        tipo_cuenta=client.get("tipo_cuenta"),
-                        numero_tarjeta=client.get("numero_tarjeta"),
-                        personaasociada_id=client.get("personaasociada_id"),
-                        nombre_comercial=client.get("nombre_comercial"),
-                        origen=client.get("origen"),
-                        pvp_default=client.get("pvp_default"),
-                        id_categoria=client.get("id_categoria"),
-                        categoria_nombre=client.get("categoria_nombre")
+                        identification=client.get("cedula"),
+                        name=client.get("razon_social"),
+                        comercial_name=client.get("nombre_comercial"),
+                        is_foreign=client.get("es_extranjero"),
+                        email=client.get("email")
                  )
                  db.session.add(new_client)
+            db.session.commit()
+            return True
+        except Exception as e:
+            self.log.errorExc(None,e,traceback)
+            return False
+        
+    def appendContacts(self,client:Client,contacts):
+        try:   
+            old_contacts = ContactInfo.query.filter(ContactInfo.client_id== client.id).all()
+            for contact in contacts:
+                if FormatValidator.getStrData(contact.get("id")) is None:
+                    new_contact = ContactInfo(
+                        area=contact.get("area"),
+                        contact=contact.get("contact"),
+                        client_id=client.id,
+                        default=contact.get("default")
+                    )
+                    db.session.add(new_contact)
+                    if new_contact.default:
+                        client.default_phone = new_contact.contact
+                else:
+                    old_contact = next((old_contact for old_contact in old_contacts if old_contact.id == contact.get("id")), None)
+                    if old_contact:
+                        old_contact.area = contact.get("area")
+                        old_contact.contact = contact.get("contact")
+                        old_contact.default = contact.get("default")
+                        db.session.commit()
+                        old_contacts.remove(old_contact)
+                        if old_contact.default:
+                            client.default_phone = old_contact.contact
+            for old in old_contacts:
+                db.session.delete(old)
+            db.session.commit()
+            return client
+        except Exception as e:
+            self.log.errorExc(None,e,traceback)
+            return None
+                
+
+    def appendAddresses(self,client:Client,addresses):
+        try:   
+            old_addresses = DeliveryAddress.query.filter(DeliveryAddress.client_id== client.id).all()
+            for address in addresses:
+                if FormatValidator.getStrData(address.get("id")) is None:
+                    new_address = DeliveryAddress(
+                        location=address.get("location"),
+                        address=address.get("address"),
+                        client_id=client.id,
+                        default=address.get("default")
+                    )
+                    db.session.add(new_address)
+                    if new_address.default:
+                        client.default_address = new_address.address
+                else:
+                    old_address = next((old_address for old_address in old_addresses if old_address.id == address.get("id")), None)
+                    if old_address:
+                        old_address.location = address.get("location")
+                        old_address.address = address.get("address")
+                        old_address.default = address.get("default")
+                        db.session.commit()
+                        old_addresses.remove(old_address)
+                        if old_address.default:
+                            client.default_address = old_address.address
+            for old in old_addresses:
+                db.session.delete(old)
+            db.session.commit()
+            return client
+        except Exception as e:
+            self.log.errorExc(None,e,traceback)
+            return None
+    
+    def delete(self,object):
+        try:
+            ContactInfo.query.filter(ContactInfo.client_id==object.id).delete()
+            DeliveryAddress.query.filter(DeliveryAddress.client_id==object.id).delete()
+            db.session.delete(object)
             db.session.commit()
             return True
         except Exception as e:

@@ -13,13 +13,13 @@ class ProfileCreateValidation:
     @staticmethod 
     def validateProfile(name,code):
         isValid = False
-        new_menu = ProfileManager().findProfileByCodeAndName(name,code)
-        if new_menu is None:
+        profile = ProfileManager().findProfileByCodeAndName(name,code)
+        if profile is None:
             isValid = True
             response = "Success"   
-        elif new_menu.name == name:
+        elif profile.name == name:
             response = "Nombre de perfil ya existe!"
-        elif new_menu.code == code:
+        elif profile.code == code:
             response = "Codigo de perfil ya existe!"
         return ValidationResponse(isValid,response)
     

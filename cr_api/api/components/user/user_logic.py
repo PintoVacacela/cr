@@ -10,6 +10,7 @@ from ..logic.ModelManager import *
 from ...schemas.model_schema import *
 from ...utilities.uploaded_files import * 
 from ...utilities.customized.FormatValidation import *
+from ..notification.notification_logic import *
 
 user_schema = UserSchema()
 document_schema = DocumentTypeSchema()
@@ -38,8 +39,8 @@ class LoginView(Resource):
 
     def post(self):
         response = any
-        username = request.form.get("username")  
-        password = request.form.get("password")
+        username = FormatValidator.getStrData(request.form.get("username"))  
+        password = FormatValidator.getStrData(request.form.get("password"))
         user = self.manager.findUserByUserName(username)
         if user is not None:
             if password==user.password:
@@ -51,6 +52,15 @@ class LoginView(Resource):
         self.log.error(None,response)
         return response
     
+class UsersActiveView(Resource):
+    def __init__(self):
+        self.log = LoggerFactory().get_logger(self.__class__)
+        self.manager = UserManager()
+
+    @jwt_required()
+    def get(self):
+        users = self.manager.findActives()
+        return [user_schema.dump(item) for item in users],200
 
 class UsersView(Resource):
     def __init__(self):
@@ -65,18 +75,18 @@ class UsersView(Resource):
     @jwt_required()
     def post(self):
         acces_id = get_jwt_identity()
-        name = request.form.get("name")  
-        lastname = request.form.get("lastname")  
-        username = request.form.get("username")  
-        email = request.form.get("email") 
-        designation = request.form.get("designation") 
-        phone_number = request.form.get("phone_number") 
-        documentType_id = request.form.get('documentType_id')
-        identification = request.form.get("identification")  
-        password = request.form.get("password")  
-        userType_id = request.form.get("userType_id")  
-        profile_id = request.form.get("profile_id") 
-        state = request.form.get("state")
+        name = FormatValidator.getStrData(request.form.get("name"))
+        lastname = FormatValidator.getStrData(request.form.get("lastname"))  
+        username = FormatValidator.getStrData(request.form.get("username"))  
+        email = FormatValidator.getStrData(request.form.get("email")) 
+        designation = FormatValidator.getStrData(request.form.get("designation")) 
+        phone_number = FormatValidator.getStrData(request.form.get("phone_number")) 
+        documentType_id = FormatValidator.getStrData(request.form.get('documentType_id'))
+        identification = FormatValidator.getStrData(request.form.get("identification"))  
+        password = FormatValidator.getStrData(request.form.get("password"))  
+        userType_id = FormatValidator.getStrData(request.form.get("userType_id")) 
+        profile_id = FormatValidator.getStrData(request.form.get("profile_id")) 
+        state = FormatValidator.getStrData(request.form.get("state"))
         photo_url = None
         
         new_user = ApplicationUser(
@@ -146,18 +156,18 @@ class UserView(Resource):
         if user is None:
             return response_util.performResponse(404,"No se puede encontrar el usuario!")
 
-        name = request.form.get("name")  
-        lastname = request.form.get("lastname")  
-        username = request.form.get("username")  
-        email = request.form.get("email") 
-        designation = request.form.get("designation") 
-        phone_number = request.form.get("phone_number") 
-        documentType_id = request.form.get('documentType_id')
-        identification = request.form.get("identification")  
-        password = request.form.get("password")  
-        userType_id = request.form.get("userType_id")  
-        profile_id = request.form.get("profile_id") 
-        state = request.form.get("state")
+        name = FormatValidator.getStrData(request.form.get("name"))  
+        lastname = FormatValidator.getStrData(request.form.get("lastname"))  
+        username = FormatValidator.getStrData(request.form.get("username"))  
+        email = FormatValidator.getStrData(request.form.get("email")) 
+        designation = FormatValidator.getStrData(request.form.get("designation")) 
+        phone_number = FormatValidator.getStrData(request.form.get("phone_number")) 
+        documentType_id = FormatValidator.getStrData(request.form.get('documentType_id'))
+        identification = FormatValidator.getStrData(request.form.get("identification"))  
+        password = FormatValidator.getStrData(request.form.get("password"))  
+        userType_id = FormatValidator.getStrData(request.form.get("userType_id"))  
+        profile_id = FormatValidator.getStrData(request.form.get("profile_id")) 
+        state = FormatValidator.getStrData(request.form.get("state"))
 
         user.name = name if not FormatValidator.isNullOrEmpty(name) else user.name
         user.lastname = lastname if not FormatValidator.isNullOrEmpty(lastname) else user.lastname
@@ -206,8 +216,8 @@ class DocumentTypesView(Resource):
     @jwt_required()
     def post(self):
         acces_id = get_jwt_identity()
-        name = request.form.get("name")  
-        state = request.form.get("state")
+        name = FormatValidator.getStrData(request.form.get("name"))  
+        state = FormatValidator.getStrData(request.form.get("state"))
         new_document = DocumentType(
             name=name,
             state=state
@@ -255,8 +265,8 @@ class DocumentTypeView(Resource):
         if document is None:
             return response_util.performResponse(404,"No se puede tipo de documento!")
 
-        name = request.form.get("name")  
-        state = request.form.get("state")
+        name = FormatValidator.getStrData(request.form.get("name"))  
+        state = FormatValidator.getStrData(request.form.get("state"))
         document.name = name if not FormatValidator.isNullOrEmpty(name) else document.name
         document.state = state if not FormatValidator.isNullOrEmpty(state) else document.state
         validation = validator.validateDocumentData(document)
@@ -266,7 +276,7 @@ class DocumentTypeView(Resource):
             return response_util.performResponseObject(200,"Tipo de Documento actualizado exitosamente!",document_schema.dump(document))
         else:
             self.log.error(acces_id,validation.response)
-        return validation.response
+        return response_util.performResponse(400,validation.response)
     
 
 class UserTypesView(Resource):
@@ -282,8 +292,8 @@ class UserTypesView(Resource):
     @jwt_required()
     def post(self):
         acces_id = get_jwt_identity()
-        name = request.form.get("name")  
-        state = request.form.get("state")
+        name = FormatValidator.getStrData(request.form.get("name"))  
+        state = FormatValidator.getStrData(request.form.get("state"))
         new_type = UserType(
             name=name,
             state=state
@@ -331,8 +341,8 @@ class UserTypeView(Resource):
         if type is None:
             return response_util.performResponse(404,"No se puede tipo de usuario!")
 
-        name = request.form.get("name")  
-        state = request.form.get("state")
+        name = FormatValidator.getStrData(request.form.get("name"))  
+        state = FormatValidator.getStrData(request.form.get("state"))
         type.name = name if not FormatValidator.isNullOrEmpty(name) else type.name
         type.state = state if not FormatValidator.isNullOrEmpty(state) else type.state
 
@@ -343,7 +353,7 @@ class UserTypeView(Resource):
             return response_util.performResponseObject(200,"Tipo de usuario actualizado exitosamente!", user_type_schema.dump(type))
         else:
             self.log.error(acces_id,validation.response)
-        return validation.response
+        return response_util.performResponse(400,validation.response)
     
 
 
@@ -359,9 +369,9 @@ class UserConfigView(Resource):
         if user is None:
             return response_util.performResponse(404,"No se puede encontrar el usuario!")
         
-        passwordActual = request.form.get("passwordActual")  
-        passwordNew = request.form.get("passwordNew")
-        passwordConfirmation = request.form.get("passwordConfirmation")
+        passwordActual = FormatValidator.getStrData(request.form.get("passwordActual"))  
+        passwordNew = FormatValidator.getStrData(request.form.get("passwordNew"))
+        passwordConfirmation = FormatValidator.getStrData(request.form.get("passwordConfirmation"))
         response = None
         if FormatValidator.isNullOrEmpty(passwordActual):
             response = response_util.performResponse(400,"No se ingreso la contraseña actual!")

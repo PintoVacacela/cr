@@ -11,7 +11,7 @@ from .client_validation import *
 
 
 client_schema = ClientSchema()
-validator = ClientValidation()
+validator = ClientValidator()
 
 
 class ContificoClientsView(Resource):
@@ -23,7 +23,7 @@ class ContificoClientsView(Resource):
     def get(self):
         clients = self.manager.getClientData()
         if clients:
-            return clients,200
+            return True,200
         return response_util.performResponse(404,"No se pudo obtener la lista!")
 
 
@@ -57,69 +57,168 @@ class ClientsView(Resource):
     @jwt_required()
     def post(self):
         acces_id = get_jwt_identity()
-        id_client=request.form.get("id_client")
-        ruc=request.form.get("ruc")
-        cedula=request.form.get("cedula")
-        placa=request.form.get("placa")
-        razon_social=request.form.get("razon_social")
-        telefonos=request.form.get("telefonos")
-        direccion=request.form.get("direccion")
-        tipo=request.form.get("tipo")
-        es_cliente=request.form.get("es_cliente")
-        es_proveedor=request.form.get("es_proveedor")
-        es_empleado=request.form.get("es_empleado")
-        es_corporativo=request.form.get("es_corporativo")
-        aplicar_cupo=request.form.get("aplicar_cupo")
-        email=request.form.get("email")
-        es_vendedor=request.form.get("es_vendedor")
-        es_extranjero=request.form.get("es_extranjero")
-        porcentaje_descuento=request.form.get("porcentaje_descuento")
-        banco_codigo_id=request.form.get("banco_codigo_id")
-        tipo_cuenta=request.form.get("tipo_cuenta")
-        numero_tarjeta=request.form.get("numero_tarjeta")
-        personaasociada_id=request.form.get("personaasociada_id")
-        nombre_comercial=request.form.get("nombre_comercial")
-        origen=request.form.get("origen")
-        pvp_default=request.form.get("pvp_default")
-        id_categoria=request.form.get("id_categoria")
-        categoria_nombre=request.form.get("categoria_nombre")
-        
+        type=FormatValidator.getStrData(request.form.get("type"))
+        ruc=FormatValidator.getStrData(request.form.get("ruc"))
+        identification=FormatValidator.getStrData(request.form.get("identification"))
+        name=FormatValidator.getStrData(request.form.get("name"))
+        comercial_name=FormatValidator.getStrData(request.form.get("comercial_name"))
+        province=FormatValidator.getStrData(request.form.get("province"))
+        canton=FormatValidator.getStrData(request.form.get("canton"))
+        parish=FormatValidator.getStrData(request.form.get("parish"))
+        sex=FormatValidator.getStrData(request.form.get("sex"))
+        civil_state=FormatValidator.getStrData(request.form.get("civil_state"))
+        source_income=FormatValidator.getStrData(request.form.get("source_income"))
+        is_foreign=FormatValidator.getBooleanFromString(request.form.get("is_foreign"))
+        special_taxpayer=FormatValidator.getBooleanFromString(request.form.get("special_taxpayer"))
+        email=FormatValidator.getStrData(request.form.get("email"))
+        category_id=FormatValidator.getStrData(request.form.get("category_id"))
         new_client = Client(
-            id_client=id_client,
+            type=type,
             ruc=ruc,
-            cedula=cedula,
-            placa=placa,
-            razon_social=razon_social,
-            telefonos=telefonos,
-            direccion=direccion,
-            tipo=tipo,
-            es_cliente=es_cliente,
-            es_proveedor=es_proveedor,
-            es_empleado=es_empleado,
-            es_corporativo=es_corporativo,
-            aplicar_cupo=aplicar_cupo,
+            identification=identification,
+            name=name,
+            comercial_name=comercial_name,
+            province=province,
+            canton=canton,
+            parish=parish,
+            sex=sex,
+            civil_state=civil_state,
+            source_income=source_income,
+            is_foreign=is_foreign,
+            special_taxpayer=special_taxpayer,
             email=email,
-            es_vendedor=es_vendedor,
-            es_extranjero=es_extranjero,
-            porcentaje_descuento=porcentaje_descuento,
-            banco_codigo_id=banco_codigo_id,
-            tipo_cuenta=tipo_cuenta,
-            numero_tarjeta=numero_tarjeta,
-            personaasociada_id=personaasociada_id,
-            nombre_comercial=nombre_comercial,
-            origen=origen,
-            pvp_default=pvp_default,
-            id_categoria=id_categoria,
-            categoria_nombre=categoria_nombre
+            category_id=category_id
         )
-        
         validation = validator.validateClientData(new_client)
-        if validation.isValid:
-            self.manager.create(new_client)
-            self.log.info(acces_id,validation.response)
-            return response_util.performResponseObject(201,"Cliente creado exitosamente!",client_schema.dump(new_client))
-        else:
+        if not validation.isValid:
             response = response_util.performResponse(400,validation.response)
-        self.log.error(acces_id,validation.response)
+            self.log.error(acces_id,validation.response)
+            return response
+        self.manager.create(new_client)
+        paymentType=FormatValidator.getStrData(request.form.get("paymentType"))
+        paymentDays=FormatValidator.getStrData(request.form.get("paymentDays"))
+        paymentMaxAmount=FormatValidator.getStrData(request.form.get("paymentMaxAmount"))
+        if not paymentType:
+            response = response_util.performResponse(400,"Se debe asignar un metodo de pago!")
+            self.log.error(acces_id,validation.response)
+            return response
+        else :
+            new_payment = PaymentMethod(
+                type=paymentType,
+                days=paymentDays,
+                max_amount=paymentMaxAmount,
+                client_id=new_client.id
+            )
+            
+            payment_manager = ModelManager(PaymentMethod)
+            payment_manager.create(new_payment)
+
+        contacts=FormatValidator.getStrData(request.form.get("contacts"))
+        addresses=FormatValidator.getStrData(request.form.get("addresses"))
+
+        if contacts:
+            data = FormatValidator.getObjectFromRquestJson(contacts)
+            self.manager.appendContacts(new_client,data)
+        
+        if addresses:
+            data = FormatValidator.getObjectFromRquestJson(addresses)
+            self.manager.appendAddresses(new_client,data)
+
+        self.log.info(acces_id,validation.response)
+        return response_util.performResponseObject(201,"Cliente creado exitosamente!",client_schema.dump(new_client))
+      
+
+class ClientView(Resource):
+    def __init__(self):
+        self.manager = ClientManager()
+        self.log = LoggerFactory().get_logger(self.__class__)
+
+    @jwt_required()
+    def get(self, id_client):
+        return client_schema.dump(self.manager.findById(id_client))
+    
+    @jwt_required()
+    def delete(self, id_client):
+        acces_id = get_jwt_identity()
+        client = self.manager.findById(id_client)
+        if client is None:
+            return response_util.performResponse(404,"No se puede encontrar el cliente!")
+        validation = validator.validateDeleteClient(client)
+        if not validation.isValid:
+            return response_util.performResponse(404,validation.response)
+        self.manager.delete(client)
+        response = response_util.performResponse(201,"Cliente eliminado exitosamente!")
+        self.log.info(acces_id,response)
         return response
-                
+
+    
+    @jwt_required()
+    def put(self, id_client):
+        acces_id = get_jwt_identity()
+        client = self.manager.findById(id_client)
+        if client is None:
+            return response_util.performResponse(404,"No se puede encontrar el cliente!")
+
+        type=FormatValidator.getStrData(request.form.get("type"))
+        ruc=FormatValidator.getStrData(request.form.get("ruc"))
+        identification=FormatValidator.getStrData(request.form.get("identification"))
+        name=FormatValidator.getStrData(request.form.get("name"))
+        comercial_name=FormatValidator.getStrData(request.form.get("comercial_name"))
+        province=FormatValidator.getStrData(request.form.get("province"))
+        canton=FormatValidator.getStrData(request.form.get("canton"))
+        parish=FormatValidator.getStrData(request.form.get("parish"))
+        sex=FormatValidator.getStrData(request.form.get("sex"))
+        civil_state=FormatValidator.getStrData(request.form.get("civil_state"))
+        source_income=FormatValidator.getStrData(request.form.get("source_income"))
+        is_foreign=FormatValidator.getBooleanFromString(request.form.get("is_foreign"))
+        special_taxpayer=FormatValidator.getBooleanFromString(request.form.get("special_taxpayer"))
+        email=FormatValidator.getStrData(request.form.get("email"))
+        category_id=FormatValidator.getStrData(request.form.get("category_id"))
+
+        client.type = type
+        client.ruc = ruc
+        client.identification = identification
+        client.name = name
+        client.comercial_name = comercial_name
+        client.province = province
+        client.canton = canton
+        client.parish = parish
+        client.sex = sex
+        client.civil_state = civil_state
+        client.source_income = source_income
+        client.is_foreign = is_foreign
+        client.special_taxpayer = special_taxpayer
+        client.email = email
+        client.category_id = category_id
+        
+        validation = validator.validateClientData(client)
+        if not validation.isValid:
+            response = response_util.performResponse(400,validation.response)
+            self.log.error(acces_id,validation.response)
+            return response
+        self.manager.put()
+        paymentType=FormatValidator.getStrData(request.form.get("paymentType"))
+        paymentDays=FormatValidator.getStrData(request.form.get("paymentDays"))
+        paymentMaxAmount=FormatValidator.getStrData(request.form.get("paymentMaxAmount"))
+        if not paymentType:
+            response = response_util.performResponse(400,"Se debe asignar un metodo de pago!")
+            self.log.error(acces_id,validation.response)
+            return response
+        else :
+            payment = PaymentMethod.query.filter(PaymentMethod.client_id == client.id).first()
+            payment.type=paymentType
+            payment.days=paymentDays
+            payment.max_amount=paymentMaxAmount
+            self.manager.put()
+
+        contacts=FormatValidator.getStrData(request.form.get("contacts"))
+        addresses=FormatValidator.getStrData(request.form.get("addresses"))
+
+        if contacts:
+            data = FormatValidator.getObjectFromRquestJson(contacts)
+            self.manager.appendContacts(client,data)
+        
+        if addresses:
+            data = FormatValidator.getObjectFromRquestJson(addresses)
+            self.manager.appendAddresses(client,data)
+        return response_util.performResponseObject(200,"Cliente actualizado exitosamente!", client_schema.dump(client))

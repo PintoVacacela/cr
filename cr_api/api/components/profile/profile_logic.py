@@ -27,8 +27,8 @@ class ProfilesView(BaseLogicClass):
     def post(self):
         acces_id = get_jwt_identity()
 
-        name = request.form.get("name")  
-        code = request.form.get("code")  
+        name = FormatValidator.getStrData(request.form.get("name"))  
+        code = FormatValidator.getStrData(request.form.get("code"))  
         menus = FormatValidator.getListFomrString(request.form.get("menus"))
         types = FormatValidator.getListFomrString(request.form.get("userTypes"))
         new_profile = Profile(
@@ -86,13 +86,15 @@ class ProfileView(Resource):
         if profile is None:
             return response_util.performResponse(404,"No se puede encontrar el perfil!")
 
-        name = request.form.get("name")  
-        code = request.form.get("code")  
+        name = FormatValidator.getStrData(request.form.get("name"))
+        code = FormatValidator.getStrData(request.form.get("code"))  
         menus = FormatValidator.getListFomrString(request.form.get("menus") )
         userTypes = FormatValidator.getListFomrString(request.form.get("userTypes"))
-        profile.name = name if not FormatValidator.isNullOrEmpty(name) else type.name
-        profile.code = code if not FormatValidator.isNullOrEmpty(code) else type.code
+        profile.name = name if not FormatValidator.isNullOrEmpty(name) else profile.name
+        profile.code = code if not FormatValidator.isNullOrEmpty(code) else profile.code
         validation = validator.validateProfileData(profile,menus)
+        if not menus:
+            return response_util.performResponse(400,"No existe ningun acceso seleccionado!")
         if validation.isValid:
             self.manager.put()
             if menus is not None:
@@ -102,7 +104,7 @@ class ProfileView(Resource):
             return  response_util.performResponseObject(200,"Perfil actualizado exitosamente!", profile_schema.dump(profile))
         else:
             self.log.error(acces_id,validation.response)
-        return validation.response
+        return response_util.performResponse(400,validation.response)
     
 
 

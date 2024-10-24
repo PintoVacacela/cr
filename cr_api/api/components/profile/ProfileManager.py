@@ -19,7 +19,7 @@ class ProfileManager (ModelManager):
                 )
                 db.session.add(new_item)
                 db.session.commit()
-            return new_item
+            return profile
         except Exception as e:
             self.log.errorExc(None,e,traceback)
             return None
@@ -35,7 +35,7 @@ class ProfileManager (ModelManager):
                 )
                 db.session.add(new_item)
                 db.session.commit()
-            return new_item
+            return profile
         except Exception as e:
             self.log.errorExc(None,e,traceback)
             return None

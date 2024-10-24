@@ -51,7 +51,4 @@ class UploadView(Resource):
     
 
     def get(self,file_name):
-        print(file_name)
-        
-        print(UPLOAD_FOLDER)
         return send_from_directory(UPLOAD_FOLDER, file_name)

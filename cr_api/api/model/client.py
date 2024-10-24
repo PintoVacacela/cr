@@ -7,50 +7,36 @@ class ClientType(Enum):
     N = "Natural"
     J = "Juridica"
     I = "SinId"
-    P = "Placa"
+    # P = "Placa"
 
 class PaymentType(Enum):
-    Contado = False
-    Credito = True
+    Contado = 1
+    Credito = 2
 
 class Client(BasicModel):
     id_client=db.Column(db.String(16))
-    ruc=db.Column(db.String(13))
-    cedula=db.Column(db.String(10))
-    placa=db.Column(db.String(13))
-    razon_social=db.Column(db.String(300))
-    telefonos=db.Column(db.String(50))
-    direccion=db.Column(db.String(300))
-    tipo=db.Column(db.String(10))
-    es_cliente=db.Column(db.Boolean)
-    es_proveedor=db.Column(db.Boolean)
-    es_empleado=db.Column(db.Boolean)
-    es_corporativo=db.Column(db.Boolean)
-    aplicar_cupo=db.Column(db.Boolean)
-    email=db.Column(db.String(300))
-    es_vendedor=db.Column(db.Boolean)
-    es_extranjero=db.Column(db.Boolean)
-    porcentaje_descuento=db.Column(db.Float) 
-    adicional1_cliente=db.Column(db.String(300))
-    adicional2_cliente=db.Column(db.String(300))
-    adicional3_cliente=db.Column(db.String(300))
-    adicional4_cliente=db.Column(db.String(300))
-    adicional1_proveedor=db.Column(db.String(300))
-    adicional2_proveedor=db.Column(db.String(300))
-    adicional3_proveedor=db.Column(db.String(300))
-    adicional4_proveedor=db.Column(db.String(300))
-    banco_codigo_id=db.Column(db.String(16))
-    tipo_cuenta=db.Column(db.String(2))
-    numero_tarjeta=db.Column(db.String(200))
-    personaasociada_id=db.Column(db.String(16))
-    nombre_comercial=db.Column(db.String(300))
-    origen=db.Column(db.String(3))
-    pvp_default=db.Column(db.String(50))
-    id_categoria=db.Column(db.String(16))
-    categoria_nombre=db.Column(db.String(40))
+    type = db.Column(db.Enum(ClientType), default='N')
+    ruc = db.Column(db.String(13))
+    identification = db.Column(db.String(10),unique=True, nullable=False)
+    name = db.Column(db.String(300),nullable=False)
+    comercial_name = db.Column(db.String(300))
+    province = db.Column(db.String(50))
+    canton = db.Column(db.String(50))
+    parish = db.Column(db.String(50))
+    sex = db.Column(db.String(50))
+    civil_state = db.Column(db.String(50))
+    source_income = db.Column(db.String(50))
+    is_foreign = db.Column(db.Boolean)
+    special_taxpayer  = db.Column(db.Boolean)
+    email = db.Column(db.String(50))
+    default_phone = db.Column(db.String(200))
+    default_address = db.Column(db.String(200))
     contacts = db.relationship('ContactInfo', back_populates='client')
     addresses = db.relationship('DeliveryAddress', back_populates='client')
-    payment_method = db.relationship("PaymentMethod", back_populates="client")
+    payment_method = db.relationship("PaymentMethod",uselist=False, back_populates="client", cascade='all, delete-orphan')
+    category_id = db.Column(db.Integer, db.ForeignKey("client_category.id"))
+    category = db.relationship("ClientCategory", back_populates="clients")
+    events = db.relationship('Event')
 
 class ContactInfo(BasicModel):
     area = db.Column(db.String(100))
@@ -69,8 +55,18 @@ class DeliveryAddress(BasicModel):
 class PaymentMethod(BasicModel):
     type = db.Column(db.Enum(PaymentType), default='Contado')
     days = db.Column(db.Integer)
+    max_amount = db.Column(db.Float)
     client_id = db.Column(db.Integer, db.ForeignKey("client.id"), unique=True)
     client = db.relationship("Client", back_populates="payment_method")
+
+
+class ClientCategory(BasicModel):
+    code = db.Column(db.String(20))
+    name = db.Column(db.String(100))
+    parent_id = db.Column(db.Integer)
+    clients = db.relationship('Client')
+
+
     
     
 

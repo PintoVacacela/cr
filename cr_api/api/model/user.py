@@ -26,7 +26,9 @@ class ApplicationUser(BasicModel):
     photo_url = db.Column(db.String(200))
     profile_id = db.Column(db.Integer, db.ForeignKey("profile.id"))
     profile = db.relationship("Profile", back_populates="users")
-
+    notifications = db.relationship('UserNotification')
+    events = db.relationship('Event', secondary='event_user', back_populates='users')
+    
 
 
 
