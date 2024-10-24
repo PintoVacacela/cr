@@ -176,5 +176,13 @@ class UserNotificationSchema(SQLAlchemyAutoSchema):
         include_relationships = True
         load_instance = True
 
+class AlertSchema(SQLAlchemyAutoSchema):
+    state = EnumADiccionario(attribute=("state"))
+    type = EnumADiccionario(attribute=("type"))
+    class Meta:
+        model = Alert
+        include_relationships = True
+        load_instance = True
+
 
 

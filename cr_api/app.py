@@ -15,9 +15,12 @@ from api.components.event.event_logic import *
 from api.components.service.service_logic import *
 
 from api.utilities.uploaded_files import *
+from api.utilities.customized.SchedulerTasks import create_diary_alerts
 
 from api import UPLOAD_FOLDER
 from flask_socketio import SocketIO
+from apscheduler.schedulers.background import BackgroundScheduler
+from datetime import datetime, timedelta
 from api.utilities.socket.socket_events import init_socketio
 
 import os
@@ -46,6 +49,8 @@ api.add_resource(UserView, '/api/user/<string:id_user>')
 api.add_resource(NotificationsView, '/api/notifications')
 api.add_resource(NotificationsAllView, '/api/notifications_all')
 api.add_resource(NotificationView, '/api/notification/<string:id_notification>')
+api.add_resource(AlertsView, '/api/alerts')
+
 
 api.add_resource(MenusView, '/api/menus')
 api.add_resource(UserMenusView, '/api/user_menus')
@@ -102,6 +107,24 @@ def uploaded_file(filename):
 
 jwt = JWTManager(app)
 
+# scheduler = BackgroundScheduler()
+# today = datetime.now()
+# tomorrow = today + timedelta(days=1)
+# start_of_day = tomorrow.replace(hour=0, minute=0, second=0, microsecond=0)
+# scheduler.add_job(func=create_diary_alerts, trigger='date', run_date=start_of_day)
+# scheduler.start()
+
+
+scheduler = BackgroundScheduler()
+hora_especifica = datetime.now().replace(hour=8, minute=47, second=0, microsecond=0)  # Cambia a la hora deseada
+if hora_especifica < datetime.now():
+    hora_especifica += timedelta(days=1)
+scheduler.add_job(func=create_diary_alerts, trigger='date', run_date=hora_especifica)
+scheduler.start()
+
 
 if __name__ == "__main__":
-    socketio.run(host='0.0.0.0', port=5000)
+    try:
+        socketio.run(app, host='0.0.0.0', port=5000)
+    except (KeyboardInterrupt, SystemExit):
+        scheduler.shutdown()

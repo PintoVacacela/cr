@@ -32,3 +32,4 @@ pyodbc
 flask-socketio== 5.4.1
 python-socketio==5.11.4
 python-dateutil
+APScheduler

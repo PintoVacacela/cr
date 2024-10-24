@@ -16,3 +16,12 @@ class UserNotification(BasicModel):
     created_at = db.Column(db.DateTime, default=func.now())
     user_id = db.Column(db.Integer, db.ForeignKey("application_user.id"))
     user = db.relationship("ApplicationUser", back_populates="notifications")
+
+
+class Alert(BasicModel):
+    type = db.Column(db.Enum(type), default='INFO')
+    message = db.Column(db.String(500))
+    created_at = db.Column(db.DateTime, default=func.now())
+    is_general = db.Column(db.Boolean, default=False)
+    user_id = db.Column(db.Integer, db.ForeignKey("application_user.id"))
+    user = db.relationship("ApplicationUser")

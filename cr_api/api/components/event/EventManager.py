@@ -1,7 +1,7 @@
 from ..logic.ModelManager import *
 from ...model.client_service import *
 from ..notification.notification_logic import *
-
+from datetime import date
 from sqlalchemy import or_
 
 class EventManager (ModelManager):
@@ -9,7 +9,7 @@ class EventManager (ModelManager):
     def __init__(self):
         super().__init__(Event)
 
-
+ 
     def appendUsers(self,event:Event,users):
         try:
             not_util = NotificationUtils()
@@ -22,7 +22,8 @@ class EventManager (ModelManager):
                 )
                 db.session.add(new_item)
                 db.session.commit()
-                not_util.createInfo(new_item.user_id,event.name + ":" +event.start_date,"Se le ha asignado un evento")
+                message = "Nombre: "+ event.name + "\nFecha:" + event.start_date.strftime("%Y-%m-%d") +"\nCliente:"+event.client.name+"\nDescripcion:"+event.description
+                not_util.createInfo(new_item.user_id,message,"Se le ha asignado un evento")
             return event
         except Exception as e:
             self.log.errorExc(None,e,traceback)
@@ -75,11 +76,16 @@ class EventManager (ModelManager):
         
     def scheduleEvents(self,event:Event,scheduled):
         try:
+            alert_util = AlertUtils()
             event.scheduled.clear()
             db.session.commit()
             for item in scheduled:
                 db.session.add(item)
-            db.session.commit()
+                db.session.commit()
+                if item.date == date.today():
+                    message = "Nombre: "+ event.name + "\nFecha:" + event.start_date.strftime("%Y-%m-%d")
+                    for user in  event.users:
+                        alert_util.createWarning(user.id,message,False)
             return event
         except Exception as e:
             self.log.errorExc(None,e,traceback)

@@ -39,3 +39,6 @@ def init_socketio(sio: SocketIO):
 
 def emit_notification_to_user(user_id, data):
     socketio.emit('receive_notification', data, room=user_id)
+
+def emit_alert_to_user(user_id, data):
+    socketio.emit('receive_alert', data, room=user_id)
