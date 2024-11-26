@@ -1,6 +1,6 @@
 from ..logic.ModelManager import *
 from ...model.client import *
-import requests
+from ..integrator.ContificoIntegrator import *
 
 
 class ClientManager (ModelManager):
@@ -22,11 +22,8 @@ class ClientManager (ModelManager):
 
     def getClientData(self):
         try:
-            headers = {
-                "Authorization":self.key
-                }
-            clients = requests.get(self.path+"/persona/", headers=headers)
-            clients_json=clients.json()
+            integrator = ContificoIntegrator()
+            clients_json=integrator.getClientData()
             db.session.query(self.model).delete()
             db.session.commit()
             for client in clients_json:

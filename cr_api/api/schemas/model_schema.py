@@ -10,13 +10,9 @@ from ..model.product import *
 from ..model.menu import*
 from ..model.notification import * 
 from ..model.client_service import *
+from ..model.bill import *
 
-class ServiceSchema(SQLAlchemyAutoSchema):
-    state = EnumADiccionario(attribute=("state"))
-    class Meta:
-        model = Service
-        include_relationships = True
-        load_instance = True
+
 
 
 class ProductSchema(SQLAlchemyAutoSchema):
@@ -27,6 +23,15 @@ class ProductSchema(SQLAlchemyAutoSchema):
         model = Product
         include_relationships = True
         load_instance = True
+
+class ProductAssignmentSchema(SQLAlchemyAutoSchema):
+    product = Nested(ProductSchema)
+    class Meta:
+        model = ProductAssignment
+        include_relationships = True
+        load_instance = True
+
+
 
 class MenuSchema(SQLAlchemyAutoSchema):
     state = EnumADiccionario(attribute=("state"))
@@ -87,13 +92,7 @@ class UserTypeSchema(SQLAlchemyAutoSchema):
         load_instance = True
         exclude = ['users','profiles']
 
-class DocumentTypeSchema(SQLAlchemyAutoSchema):
-    state = EnumADiccionario(attribute=("state"))
-    class Meta:
-        model = DocumentType
-        include_relationships = True
-        load_instance = True
-        exclude = ['users']
+
 
 class ProfileSchema(SQLAlchemyAutoSchema):
     state = EnumADiccionario(attribute=("state"))
@@ -104,6 +103,13 @@ class ProfileSchema(SQLAlchemyAutoSchema):
         include_relationships = True
         load_instance = True
         exclude = ['users']
+
+class DocumentTypeSchema(SQLAlchemyAutoSchema):
+    state = EnumADiccionario(attribute=("state"))
+    class Meta:
+        model = DocumentType
+        include_relationships = True
+        load_instance = True
 
 
 class ProfileCompressedSchema(SQLAlchemyAutoSchema):
@@ -134,12 +140,13 @@ class EventCompressedSchema(SQLAlchemyAutoSchema):
 
 
 class UserSchema(SQLAlchemyAutoSchema):
-    documentType = Nested(DocumentTypeSchema)
+    
     state = EnumADiccionario(attribute=("state"))
     userState = EnumADiccionario(attribute=("userState"))
     userType = Nested(UserTypeSchema)
     profile =  Nested(ProfileSchema) 
     events = EventCompressedSchema(many=True) 
+    documentType = Nested(DocumentTypeSchema)
     class Meta:
         model = ApplicationUser
         include_relationships = True
@@ -153,7 +160,7 @@ class EventSchema(SQLAlchemyAutoSchema):
     days = fields.List(fields.Nested(lambda: EventDaySchema()))
     client =  Nested(ClientSchema)
     users = fields.List(fields.Nested(lambda: UserSchema()))
-    services = fields.List(fields.Nested(lambda: ServiceSchema()))
+    services = fields.List(fields.Nested(lambda: ProductSchema()))
     class Meta:
         model = Event
         include_relationships = True
@@ -186,3 +193,21 @@ class AlertSchema(SQLAlchemyAutoSchema):
 
 
 
+class BillDetailSchema(SQLAlchemyAutoSchema):
+    product =  Nested(ProductSchema)
+    class Meta:
+        model = BillDetail
+        include_relationships = True
+        load_instance = True
+
+class BillSchema(SQLAlchemyAutoSchema):
+    state = EnumADiccionario(attribute=("state"))
+    document_type = EnumADiccionario(attribute=("document_type"))
+    document_state = EnumADiccionario(attribute=("document_state"))
+    client =  Nested(ClientSchema)
+    seller = Nested(UserSchema)
+    details = fields.List(fields.Nested(lambda: BillDetailSchema()))
+    class Meta:
+        model = Bill
+        include_relationships = True
+        load_instance = True

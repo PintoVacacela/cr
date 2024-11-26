@@ -12,7 +12,8 @@ from api.components.profile.profile_logic import *
 from api.components.product.product_logic import *
 from api.components.notification.notification_logic import *
 from api.components.event.event_logic import * 
-from api.components.service.service_logic import *
+from api.components.assignment.assignment_logic import *
+from api.components.bill.bill_logic import *
 
 from api.utilities.uploaded_files import *
 from api.utilities.customized.SchedulerTasks import create_diary_alerts
@@ -81,15 +82,24 @@ api.add_resource(FrecuencyTypeView, '/api/frequency_types')
 api.add_resource(EventTypeView, '/api/event_types')
 api.add_resource(ScheduledEventsView, '/api/scheduled_events')
 
-
-
-
-api.add_resource(ServicesView, '/api/services')
-api.add_resource(ServiceView, '/api/service/<string:id_service>')
-
 api.add_resource(ProductsView, '/api/products')
+api.add_resource(ServicesView, '/api/services')
+api.add_resource(ClientProductView, '/api/products_assignments/<string:id_client>')
+
+
 
 api.add_resource(ContificoProductsView, '/api/contifico_products')
+
+api.add_resource(AssignmentsView, '/api/assignments')
+
+api.add_resource(ProductAssignmentsView, '/api/product_assignment/<string:id_client>')
+
+
+api.add_resource(BillsView, '/api/bills/<string:id_bill>')
+api.add_resource(BillView, '/api/bill/<string:id_bill>')
+
+
+
 
 
 

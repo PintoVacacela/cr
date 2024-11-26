@@ -1,6 +1,10 @@
 from ..logic.ModelManager import *
 from ...model.product import *
+from sqlalchemy.orm import aliased
+from sqlalchemy import case
 import requests
+from flask import jsonify
+from ..integrator.ContificoIntegrator import *
 
 
 class ProductManager (ModelManager):
@@ -15,11 +19,9 @@ class ProductManager (ModelManager):
 
     def getProductData(self):
         try:
-            headers = {
-                "Authorization":self.key
-                }
-            products = requests.get(self.path+"/producto/", headers=headers)
-            products_json=products.json()
+            integrator = ContificoIntegrator()
+            
+            products_json=integrator.getProductsData()
             db.session.query(self.model).delete()
             db.session.commit()
             for product in products_json:
@@ -58,7 +60,54 @@ class ProductManager (ModelManager):
             return False
         
     
+    def findProductsPerType(self, type):
+        try:
+            products = self.model.query.filter(self.model.type==type).all()
+            return products
+        except Exception as e:
+            self.log.errorExc(None,e,traceback)
+            return None
+        
+    def findProductsAndAssignments(self,id_client):
+        try:
+            sql_query = """SELECT 
+                                p.id,
+                                p.code,
+                                p.name,
+                                p.pvp1,
+                                p.pvp2,
+                                p.pvp3,
+                                
+                                CASE
+                                    WHEN pa.value IS NOT NULL THEN pa.value 
+                                    ELSE p.pvp1                               
+                                END AS price
+                            FROM 
+                                Product p
+                            LEFT JOIN 
+                                product_assignment pa ON pa.product_id = p.id 
+                                AND pa.client_id = :id_client"""
 
+            # Ejecutar el query y obtener los resultados
+            results = db.session.execute(sql_query, {'id_client': id_client}).fetchall()
+            result_data = []
+            for result in results:
+                result_data.append({
+                    'id': result.id,
+                    'code': result.code,
+                    'name': result.name,
+                    'pvp1': result.pvp1,
+                    'pvp2': result.pvp2,
+                    'pvp3': result.pvp3,
+                    'price': result.price  # Este es el valor calculado para el precio
+                })
+
+            # Paso 3: Convertir a JSON (puedes usar jsonify si lo quieres enviar como respuesta HTTP)
+            response = jsonify(result_data)
+            return response
+        except Exception as e:
+            self.log.errorExc(None,e,traceback)
+            return None
 
 
 

@@ -3865,3 +3865,1190 @@ TypeError: can only concatenate str (not "datetime.date") to str
 2024-10-24 09:58:30,742 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Evento creado exitosamente!', 'description': 'Created', 'type': 'Success', 'object': {'users': [{'profile': {'menus': [1, 2, 3, 4, 8, 9, 10, 1010, 1011, 1012, 1013, 1014], 'code': 'ADMIN', 'userTypes': [1, 2], 'name': 'ADMIN', 'state': {'key': 'ACTIVO', 'value': 1}, 'id': 1}, 'phone_number': '0992626973', 'documentType': {'name': 'CEDULA', 'id': 1, 'state': {'key': 'ACTIVO', 'value': 1}}, 'name': 'iuser1', 'username': 'iuser1', 'photo_url': 'http://127.0.0.1:5000/uploads/user-847-2024-09-26-CarlosPinto.png', 'email': 'pintoandres2014a@gmail.com', 'notifications': [1, 2, 3, 4, 5], 'identification': '0000000000', 'events': [3, 4, 5, 6, 7, 8, 9, 10, 11], 'userType': {'name': 'ADMIN', 'id': 1, 'state': {'key': 'ACTIVO', 'value': 1}}, 'lastname': 'iuser1', 'designation': 'admin_test', 'state': {'key': 'ACTIVO', 'value': 1}, 'userState': {'key': 'ACTIVO', 'value': 1}, 'id': 1}], 'description': 'asdfasdfasdf', 'price': None, 'is_obligatory': False, 'days': [{'number_day': None, 'id': 16, 'state': {'key': 'ACTIVO', 'value': 1}, 'day': {'key': 'Jueves', 'value': 3}}], 'scheduled': [52], 'frequency_value': 1, 'start_date': '2024-10-24', 'type': {'key': 'Mantenimiento', 'value': 1}, 'name': 'asdfasdfasdf', 'end_date': '2024-10-24', 'has_price': False, 'address': 'NORTE - De los Helechos', 'client': {'contacts': [{'area': 'TEST', 'client': 1, 'state': {'key': 'ACTIVO', 'value': 1}, 'default': True, 'id': 2, 'contact': '099999999'}], 'default_phone': '099999999', 'default_address': 'De los Helechos', 'sex': 'Masculino', 'source_income': 'Empleado Privado', 'province': 'PICHINCHA', 'state': {'key': 'ACTIVO', 'value': 1}, 'comercial_name': 'Carlos Pinto vACACE', 'id': 1, 'addresses': [{'location': 'NORTE', 'default': True, 'client': 1, 'state': {'key': 'ACTIVO', 'value': 1}, 'address': 'De los Helechos', 'id': 1}], 'category': None, 'type': {'key': 'N', 'value': 'Natural'}, 'name': 'Carlos Pinto', 'ruc': '1722210976001', 'email': 'pintoandres@gmail.com', 'canton': 'QUITO', 'id_client': None, 'identification': '1722210976', 'civil_state': 'Soltero', 'events': [3, 4, 5, 6, 7, 8, 9, 10, 11], 'special_taxpayer': False, 'is_foreign': False, 'parish': 'Kennedy', 'payment_method': {'days': 15, 'type': {'key': 'Credito', 'value': 2}, 'client': 1, 'state': {'key': 'ACTIVO', 'value': 1}, 'id': 1, 'max_amount': 0.0}}, 'state': {'key': 'ACTIVO', 'value': 1}, 'frequency_type': {'key': 'Semanalmente', 'value': 1}, 'services': [{'description': 'esto es un a prueba', 'price': 5.03, 'code': 'test2', 'events': [3, 4, 5, 6, 7, 8, 9, 10, 11], 'name': 'test2', 'state': {'key': 'ACTIVO', 'value': 1}, 'id': 1}], 'id': 11}}, 201)
 2024-10-24 10:07:35,764 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Notificacion leida!', 'description': 'OK', 'type': 'Success'}, 200)
 2024-10-24 10:08:00,557 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Notificacion leida!', 'description': 'OK', 'type': 'Success'}, 200)
+2024-10-25 18:50:51,361 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyOTkwMDI1MSwianRpIjoiNTcwZTNkN2EtYjQ1YS00MDFjLWI1MGQtNDcxNWJjMGM1NzQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzI5OTAwMjUxLCJleHAiOjE3Mjk5MzI2NTF9.FEPayBTuroCPdrYQj4uqhSdgMGSfAlT_Z3lFqACnsXE'}, 200)
+2024-10-25 18:50:51,368 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyOTkwMDI1MSwianRpIjoiNTcwZTNkN2EtYjQ1YS00MDFjLWI1MGQtNDcxNWJjMGM1NzQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzI5OTAwMjUxLCJleHAiOjE3Mjk5MzI2NTF9.FEPayBTuroCPdrYQj4uqhSdgMGSfAlT_Z3lFqACnsXE'}, 200)
+2024-10-25 19:08:08,911 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyOTkwMTI4OCwianRpIjoiNDcyYTI1NmItM2Q4ZS00OWNlLTk4YTEtMzQ0MzE0ZDA0M2Y2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzI5OTAxMjg4LCJleHAiOjE3Mjk5MzM2ODh9.Xzv7rbdjKJU-r0WA75l1fKb0N7i3vNS9NbhaVNoYSaM'}, 200)
+2024-10-25 19:08:08,919 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyOTkwMTI4OCwianRpIjoiNDcyYTI1NmItM2Q4ZS00OWNlLTk4YTEtMzQ0MzE0ZDA0M2Y2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzI5OTAxMjg4LCJleHAiOjE3Mjk5MzM2ODh9.Xzv7rbdjKJU-r0WA75l1fKb0N7i3vNS9NbhaVNoYSaM'}, 200)
+2024-10-25 19:08:28,360 - INFO - User: 1 On: <class 'api.components.profile.profile_logic.ProfileView'> : Success!
+2024-10-25 19:08:28,360 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Perfil actualizado exitosamente!', 'description': 'OK', 'type': 'Success', 'object': {'userTypes': [1, 2], 'menus': [1, 2, 3, 4, 8, 9, 10, 1010, 1011, 1012, 1013, 1014, 1015], 'code': 'ADMIN', 'name': 'ADMIN', 'state': {'key': 'ACTIVO', 'value': 1}, 'id': 1}}, 200)
+2024-10-25 19:09:12,114 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyOTkwMTM1MiwianRpIjoiNTdjNmQyYzQtOWEyMy00OGQyLWJjNzMtMDE3NzY0ZTE0NzExIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzI5OTAxMzUyLCJleHAiOjE3Mjk5MzM3NTJ9.Pk7otyvvaYs4S9LQI7aXCcglpZ6Nm0ueUzcltytYqRQ'}, 200)
+2024-10-25 19:09:12,114 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyOTkwMTM1MiwianRpIjoiNTdjNmQyYzQtOWEyMy00OGQyLWJjNzMtMDE3NzY0ZTE0NzExIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzI5OTAxMzUyLCJleHAiOjE3Mjk5MzM3NTJ9.Pk7otyvvaYs4S9LQI7aXCcglpZ6Nm0ueUzcltytYqRQ'}, 200)
+2024-10-27 20:33:54,642 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDA3OTIzNCwianRpIjoiY2U2NTgwNDAtMDBjYi00MDE3LTk5OTYtYzA2ZjM4ODUzN2JmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMwMDc5MjM0LCJleHAiOjE3MzAxMTE2MzR9.ZV6qaw4s4WYPxdrZ2HAXyCsh2EwGRgqAWnQSBbYpmfs'}, 200)
+2024-10-27 20:33:54,646 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDA3OTIzNCwianRpIjoiY2U2NTgwNDAtMDBjYi00MDE3LTk5OTYtYzA2ZjM4ODUzN2JmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMwMDc5MjM0LCJleHAiOjE3MzAxMTE2MzR9.ZV6qaw4s4WYPxdrZ2HAXyCsh2EwGRgqAWnQSBbYpmfs'}, 200)
+2024-10-28 08:38:09,540 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDEyMjY4OSwianRpIjoiYWE0ODdlZjMtOGVkNi00YmFiLTgxYzctOWJiNDcwOTI4NWQ3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMwMTIyNjg5LCJleHAiOjE3MzAxNTUwODl9.l3ieH6hUDSQpNqWtdXBxHLnybPYJ9iiFZA8lzu8UEJg'}, 200)
+2024-10-28 08:38:09,543 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDEyMjY4OSwianRpIjoiYWE0ODdlZjMtOGVkNi00YmFiLTgxYzctOWJiNDcwOTI4NWQ3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMwMTIyNjg5LCJleHAiOjE3MzAxNTUwODl9.l3ieH6hUDSQpNqWtdXBxHLnybPYJ9iiFZA8lzu8UEJg'}, 200)
+2024-10-28 08:38:34,239 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Notificacion leida!', 'description': 'OK', 'type': 'Success'}, 200)
+2024-10-28 08:39:29,483 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Notificacion leida!', 'description': 'OK', 'type': 'Success'}, 200)
+2024-10-28 08:39:34,913 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Notificacion leida!', 'description': 'OK', 'type': 'Success'}, 200)
+2024-10-28 08:40:19,596 - INFO - User: 1 On: <class 'api.components.service.service_logic.ServicesView'> : Success
+2024-10-28 08:40:19,602 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Perfil creado exitosamente!', 'description': 'Created', 'type': 'Success', 'object': {'name': 'test', 'price': 6.0, 'events': [], 'code': 'test', 'description': 'test', 'state': {'key': 'ACTIVO', 'value': 1}, 'id': 3}}, 201)
+2024-10-28 08:41:15,479 - INFO - User: 1 On: <class 'api.components.event.event_logic.EventsView'> : Success!
+2024-10-28 08:41:15,528 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Evento creado exitosamente!', 'description': 'Created', 'type': 'Success', 'object': {'frequency_value': 1, 'type': {'key': 'Mantenimiento', 'value': 1}, 'name': 'Cosecha test', 'days': [{'number_day': None, 'state': {'key': 'ACTIVO', 'value': 1}, 'day': {'key': 'Lunes', 'value': 0}, 'id': 17}], 'price': 5.0, 'end_date': '2024-10-28', 'start_date': '2024-10-28', 'scheduled': [53], 'users': [{'identification': '0000000000', 'documentType': {'state': {'key': 'ACTIVO', 'value': 1}, 'id': 1, 'name': 'CEDULA'}, 'events': [3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 'photo_url': 'http://127.0.0.1:5000/uploads/user-847-2024-09-26-CarlosPinto.png', 'email': 'pintoandres2014a@gmail.com', 'username': 'iuser1', 'id': 1, 'profile': {'userTypes': [1, 2], 'menus': [1, 2, 3, 4, 8, 9, 10, 1010, 1011, 1012, 1013, 1014, 1015], 'code': 'ADMIN', 'name': 'ADMIN', 'state': {'key': 'ACTIVO', 'value': 1}, 'id': 1}, 'userState': {'key': 'ACTIVO', 'value': 1}, 'designation': 'admin_test', 'notifications': [1, 2, 3, 4, 5, 6], 'name': 'iuser1', 'phone_number': '0992626973', 'state': {'key': 'ACTIVO', 'value': 1}, 'lastname': 'iuser1', 'userType': {'name': 'ADMIN', 'state': {'key': 'ACTIVO', 'value': 1}, 'id': 1}}], 'description': 'Cosecha test', 'address': 'NORTE - De los Helechos', 'is_obligatory': False, 'state': {'key': 'ACTIVO', 'value': 1}, 'client': {'civil_state': 'Soltero', 'source_income': 'Empleado Privado', 'type': {'key': 'N', 'value': 'Natural'}, 'identification': '1722210976', 'sex': 'Masculino', 'contacts': [{'area': 'TEST', 'contact': '099999999', 'default': True, 'state': {'key': 'ACTIVO', 'value': 1}, 'client': 1, 'id': 2}], 'email': 'pintoandres@gmail.com', 'is_foreign': False, 'payment_method': {'type': {'key': 'Credito', 'value': 2}, 'max_amount': 0.0, 'days': 15, 'state': {'key': 'ACTIVO', 'value': 1}, 'client': 1, 'id': 1}, 'default_address': 'De los Helechos', 'name': 'Carlos Pinto', 'state': {'key': 'ACTIVO', 'value': 1}, 'events': [3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 'default_phone': '099999999', 'category': None, 'id': 1, 'special_taxpayer': False, 'province': 'PICHINCHA', 'id_client': None, 'canton': 'QUITO', 'ruc': '1722210976001', 'comercial_name': 'Carlos Pinto vACACE', 'addresses': [{'default': True, 'location': 'NORTE', 'address': 'De los Helechos', 'state': {'key': 'ACTIVO', 'value': 1}, 'client': 1, 'id': 1}], 'parish': 'Kennedy'}, 'services': [{'name': 'test', 'price': 6.0, 'events': [12], 'code': 'test', 'description': 'test', 'state': {'key': 'ACTIVO', 'value': 1}, 'id': 3}], 'id': 12, 'has_price': True, 'frequency_type': {'key': 'Semanalmente', 'value': 1}}}, 201)
+2024-10-28 08:42:49,711 - INFO - User: 1 On: <class 'api.components.event.event_logic.EventsView'> : Success!
+2024-10-28 08:42:49,754 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Evento creado exitosamente!', 'description': 'Created', 'type': 'Success', 'object': {'frequency_value': 2, 'type': {'key': 'Mantenimiento', 'value': 1}, 'name': 'test3', 'days': [{'number_day': None, 'state': {'key': 'ACTIVO', 'value': 1}, 'day': {'key': 'Viernes', 'value': 4}, 'id': 18}, {'number_day': None, 'state': {'key': 'ACTIVO', 'value': 1}, 'day': {'key': 'Sabado', 'value': 5}, 'id': 19}], 'price': None, 'end_date': '2024-12-31', 'start_date': '2024-10-28', 'scheduled': [54, 55, 56, 57, 58, 59, 60, 61, 62, 63], 'users': [{'identification': '0000000000', 'documentType': {'state': {'key': 'ACTIVO', 'value': 1}, 'id': 1, 'name': 'CEDULA'}, 'events': [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 'photo_url': 'http://127.0.0.1:5000/uploads/user-847-2024-09-26-CarlosPinto.png', 'email': 'pintoandres2014a@gmail.com', 'username': 'iuser1', 'id': 1, 'profile': {'userTypes': [1, 2], 'menus': [1, 2, 3, 4, 8, 9, 10, 1010, 1011, 1012, 1013, 1014, 1015], 'code': 'ADMIN', 'name': 'ADMIN', 'state': {'key': 'ACTIVO', 'value': 1}, 'id': 1}, 'userState': {'key': 'ACTIVO', 'value': 1}, 'designation': 'admin_test', 'notifications': [1, 2, 3, 4, 5, 6, 7], 'name': 'iuser1', 'phone_number': '0992626973', 'state': {'key': 'ACTIVO', 'value': 1}, 'lastname': 'iuser1', 'userType': {'name': 'ADMIN', 'state': {'key': 'ACTIVO', 'value': 1}, 'id': 1}}], 'description': 'prueba', 'address': 'NORTE - De los Helechos', 'is_obligatory': False, 'state': {'key': 'ACTIVO', 'value': 1}, 'client': {'civil_state': 'Soltero', 'source_income': 'Empleado Privado', 'type': {'key': 'N', 'value': 'Natural'}, 'identification': '1722210976', 'sex': 'Masculino', 'contacts': [{'area': 'TEST', 'contact': '099999999', 'default': True, 'state': {'key': 'ACTIVO', 'value': 1}, 'client': 1, 'id': 2}], 'email': 'pintoandres@gmail.com', 'is_foreign': False, 'payment_method': {'type': {'key': 'Credito', 'value': 2}, 'max_amount': 0.0, 'days': 15, 'state': {'key': 'ACTIVO', 'value': 1}, 'client': 1, 'id': 1}, 'default_address': 'De los Helechos', 'name': 'Carlos Pinto', 'state': {'key': 'ACTIVO', 'value': 1}, 'events': [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 'default_phone': '099999999', 'category': None, 'id': 1, 'special_taxpayer': False, 'province': 'PICHINCHA', 'id_client': None, 'canton': 'QUITO', 'ruc': '1722210976001', 'comercial_name': 'Carlos Pinto vACACE', 'addresses': [{'default': True, 'location': 'NORTE', 'address': 'De los Helechos', 'state': {'key': 'ACTIVO', 'value': 1}, 'client': 1, 'id': 1}], 'parish': 'Kennedy'}, 'services': [{'name': 'test2', 'price': 5.03, 'events': [3, 4, 5, 6, 7, 8, 9, 10, 11, 13], 'code': 'test2', 'description': 'esto es un a prueba', 'state': {'key': 'ACTIVO', 'value': 1}, 'id': 1}], 'id': 13, 'has_price': False, 'frequency_type': {'key': 'Semanalmente', 'value': 1}}}, 201)
+2024-10-28 08:44:32,073 - ERROR - User: None On: <class 'api.components.client.ClientCateoryManager.ClientCategoryManager'> : An error occurred: (pyodbc.DataError) ('22018', "[22018] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Conversion failed when converting the nvarchar value 'null' to data type int. (245) (SQLExecDirectW)")
+[SQL: INSERT INTO client_category (state, code, name, parent_id) OUTPUT inserted.id VALUES (?, ?, ?, ?)]
+[parameters: ('ACTIVO', 'prtueba', 'prtueba', 'null')]
+(Background on this error at: https://sqlalche.me/e/14/9h9h) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.DataError: ('22018', "[22018] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Conversion failed when converting the nvarchar value 'null' to data type int. (245) (SQLExecDirectW)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\logic\ModelManager.py", line 19, in create
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3339, in flush
+    self._flush(objects)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3479, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3439, in _flush
+    flush_context.execute()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 242, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1219, in _emit_insert_statements
+    result = connection._execute_20(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1611, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1478, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2023, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (pyodbc.DataError) ('22018', "[22018] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Conversion failed when converting the nvarchar value 'null' to data type int. (245) (SQLExecDirectW)")
+[SQL: INSERT INTO client_category (state, code, name, parent_id) OUTPUT inserted.id VALUES (?, ?, ?, ?)]
+[parameters: ('ACTIVO', 'prtueba', 'prtueba', 'null')]
+(Background on this error at: https://sqlalche.me/e/14/9h9h)
+
+2024-10-28 08:44:32,082 - INFO - User: 1 On: <class 'api.components.client.client_category_logic.ClientCategorysView'> : Success!
+2024-10-28 08:49:01,492 - INFO - User: 1 On: <class 'api.components.client.client_category_logic.ClientCategorysView'> : Success!
+2024-10-28 08:49:01,502 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Categoria creada exitosamente!', 'description': 'Created', 'type': 'Success', 'object': {'code': 'prtueba', 'clients': [], 'state': {'key': 'ACTIVO', 'value': 1}, 'parent_id': None, 'id': 9, 'name': 'prtueba'}}, 201)
+2024-10-28 08:49:21,457 - INFO - User: 1 On: <class 'api.components.client.client_category_logic.ClientCategorysView'> : Success!
+2024-10-28 08:49:21,461 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Categoria creada exitosamente!', 'description': 'Created', 'type': 'Success', 'object': {'code': 'prueba', 'clients': [], 'state': {'key': 'ACTIVO', 'value': 1}, 'parent_id': None, 'id': 10, 'name': 'prueba'}}, 201)
+2024-10-28 08:49:40,154 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 400, 'message': 'Nombre invalido!', 'description': 'Bad Request', 'type': 'Client_Errors'}, 400)
+2024-10-28 08:49:40,155 - ERROR - User: 1 On: <class 'api.components.client.client_category_logic.ClientCategorysView'> : Nombre invalido!
+2024-10-28 08:49:48,108 - INFO - User: 1 On: <class 'api.components.client.client_category_logic.ClientCategorysView'> : Success!
+2024-10-28 08:49:48,110 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Categoria creada exitosamente!', 'description': 'Created', 'type': 'Success', 'object': {'code': 'asdfasdf', 'clients': [], 'state': {'key': 'ACTIVO', 'value': 1}, 'parent_id': None, 'id': 11, 'name': 'asdfasdf'}}, 201)
+2024-10-28 08:55:26,670 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Notificacion leida!', 'description': 'OK', 'type': 'Success'}, 200)
+2024-10-28 08:55:28,749 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Notificacion leida!', 'description': 'OK', 'type': 'Success'}, 200)
+2024-10-28 08:57:17,862 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDEyMzgzNywianRpIjoiY2VhMTY5ZDQtNWQzOC00YjA3LWE4MmItM2QxMWUyYTM1Njc5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMwMTIzODM3LCJleHAiOjE3MzAxNTYyMzd9.p3GTgYi1zjqmz0V6UlCd-dtPxVeIvLRW-n9t05egAkc'}, 200)
+2024-10-28 08:57:17,863 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDEyMzgzNywianRpIjoiY2VhMTY5ZDQtNWQzOC00YjA3LWE4MmItM2QxMWUyYTM1Njc5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMwMTIzODM3LCJleHAiOjE3MzAxNTYyMzd9.p3GTgYi1zjqmz0V6UlCd-dtPxVeIvLRW-n9t05egAkc'}, 200)
+2024-10-28 09:09:04,128 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDEyNDU0NCwianRpIjoiMDY0MGFmMmEtOGE4Yi00YzEzLThlODgtYWQyYWUyOGY5OWFlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMwMTI0NTQ0LCJleHAiOjE3MzAxNTY5NDR9.iqL4C0tO11H2TpwLTAj7PCwIcNpw7AIumvZNx9vcPQk'}, 200)
+2024-10-28 09:09:04,129 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDEyNDU0NCwianRpIjoiMDY0MGFmMmEtOGE4Yi00YzEzLThlODgtYWQyYWUyOGY5OWFlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMwMTI0NTQ0LCJleHAiOjE3MzAxNTY5NDR9.iqL4C0tO11H2TpwLTAj7PCwIcNpw7AIumvZNx9vcPQk'}, 200)
+2024-10-28 09:26:20,422 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDEyNTU4MCwianRpIjoiOTU5NzI0ZjItNjJlMS00NDIzLWE1ZDgtZTUzN2U1YjUxMWZlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMwMTI1NTgwLCJleHAiOjE3MzAxNTc5ODB9.WEL-hWYKFeL5uj7JYOHVb8G7qpvtQKDncVNFhKFWQ7w'}, 200)
+2024-10-28 09:26:20,424 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDEyNTU4MCwianRpIjoiOTU5NzI0ZjItNjJlMS00NDIzLWE1ZDgtZTUzN2U1YjUxMWZlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMwMTI1NTgwLCJleHAiOjE3MzAxNTc5ODB9.WEL-hWYKFeL5uj7JYOHVb8G7qpvtQKDncVNFhKFWQ7w'}, 200)
+2024-10-28 09:34:32,199 - INFO - User: 1 On: <class 'api.components.service.service_logic.ServicesView'> : Success
+2024-10-28 09:34:32,203 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Perfil creado exitosamente!', 'description': 'Created', 'type': 'Success', 'object': {'state': {'key': 'ACTIVO', 'value': 1}, 'description': 'asdfasdfasdf', 'code': 'mantenisdf', 'name': 'Mantenimiento maquinas', 'events': [], 'id': 4, 'price': 12.0}}, 201)
+2024-10-28 09:36:32,197 - INFO - User: 1 On: <class 'api.components.event.event_logic.EventsView'> : Success!
+2024-10-28 09:36:32,238 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Evento creado exitosamente!', 'description': 'Created', 'type': 'Success', 'object': {'state': {'key': 'ACTIVO', 'value': 1}, 'frequency_type': {'key': 'Semanalmente', 'value': 1}, 'days': [{'state': {'key': 'ACTIVO', 'value': 1}, 'id': 20, 'day': {'key': 'Lunes', 'value': 0}, 'number_day': None}, {'state': {'key': 'ACTIVO', 'value': 1}, 'id': 21, 'day': {'key': 'Domingo', 'value': 6}, 'number_day': None}], 'users': [{'identification': '0000000000', 'userType': {'state': {'key': 'ACTIVO', 'value': 1}, 'id': 1, 'name': 'ADMIN'}, 'phone_number': '0992626973', 'name': 'iuser1', 'profile': {'state': {'key': 'ACTIVO', 'value': 1}, 'code': 'ADMIN', 'name': 'ADMIN', 'menus': [1, 2, 3, 4, 8, 9, 10, 1010, 1011, 1012, 1013, 1014, 1015], 'userTypes': [1, 2], 'id': 1}, 'notifications': [1, 2, 3, 4, 5, 6, 7, 8], 'userState': {'key': 'ACTIVO', 'value': 1}, 'id': 1, 'username': 'iuser1', 'state': {'key': 'ACTIVO', 'value': 1}, 'documentType': {'state': {'key': 'ACTIVO', 'value': 1}, 'id': 1, 'name': 'CEDULA'}, 'events': [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], 'lastname': 'iuser1', 'photo_url': 'http://127.0.0.1:5000/uploads/user-847-2024-09-26-CarlosPinto.png', 'email': 'pintoandres2014a@gmail.com', 'designation': 'admin_test'}], 'address': 'NORTE - De los Helechos', 'description': 'asdfasdf', 'end_date': '2024-12-31', 'start_date': '2024-10-28', 'name': 'Mantenimiento Hilteon', 'price': None, 'type': {'key': 'Mantenimiento', 'value': 1}, 'services': [{'state': {'key': 'ACTIVO', 'value': 1}, 'description': 'esto es un a prueba', 'code': 'test2', 'name': 'test2', 'events': [3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14], 'id': 1, 'price': 5.03}, {'state': {'key': 'ACTIVO', 'value': 1}, 'description': 'test', 'code': 'test', 'name': 'test', 'events': [12, 14], 'id': 3, 'price': 6.0}], 'frequency_value': 2, 'has_price': False, 'is_obligatory': False, 'scheduled': [64, 65, 66, 67, 68, 69, 70, 71, 72, 73], 'id': 14, 'client': {'payment_method': {'state': {'key': 'ACTIVO', 'value': 1}, 'days': 15, 'type': {'key': 'Credito', 'value': 2}, 'id': 1, 'max_amount': 0.0, 'client': 1}, 'category': None, 'name': 'Carlos Pinto', 'type': {'key': 'N', 'value': 'Natural'}, 'addresses': [{'state': {'key': 'ACTIVO', 'value': 1}, 'address': 'De los Helechos', 'location': 'NORTE', 'id': 1, 'default': True, 'client': 1}], 'state': {'key': 'ACTIVO', 'value': 1}, 'id_client': None, 'parish': 'Kennedy', 'default_address': 'De los Helechos', 'email': 'pintoandres@gmail.com', 'civil_state': 'Soltero', 'special_taxpayer': False, 'identification': '1722210976', 'province': 'PICHINCHA', 'sex': 'Masculino', 'source_income': 'Empleado Privado', 'id': 1, 'default_phone': '099999999', 'contacts': [{'state': {'key': 'ACTIVO', 'value': 1}, 'area': 'TEST', 'contact': '099999999', 'default': True, 'id': 2, 'client': 1}], 'canton': 'QUITO', 'is_foreign': False, 'comercial_name': 'Carlos Pinto vACACE', 'events': [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], 'ruc': '1722210976001'}}}, 201)
+2024-10-28 09:36:47,898 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Notificacion leida!', 'description': 'OK', 'type': 'Success'}, 200)
+2024-10-28 09:53:56,667 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDEyNzIzNiwianRpIjoiN2MxZGNhM2YtNzc0MC00N2FhLWIzMWItOGY3YmUyMmZiNzg3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMwMTI3MjM2LCJleHAiOjE3MzAxNTk2MzZ9.mTBig3qv_sxtxSyew_eHGX0NFUIKFUCMmr_uBizlqGg'}, 200)
+2024-10-28 09:53:56,667 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDEyNzIzNiwianRpIjoiN2MxZGNhM2YtNzc0MC00N2FhLWIzMWItOGY3YmUyMmZiNzg3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMwMTI3MjM2LCJleHAiOjE3MzAxNTk2MzZ9.mTBig3qv_sxtxSyew_eHGX0NFUIKFUCMmr_uBizlqGg'}, 200)
+2024-11-20 21:04:17,941 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjE1NDY1NywianRpIjoiODk3YjY5NDktYTJjMS00ZWZlLTlmMDUtNTkxNzBjMjczZDRhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMTU0NjU3LCJleHAiOjE3MzIxODcwNTd9.WVLByJrFOqqC3GidYddVN48WBgWBOtJGr2wSxpYtvhs'}, 200)
+2024-11-20 21:04:17,944 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjE1NDY1NywianRpIjoiODk3YjY5NDktYTJjMS00ZWZlLTlmMDUtNTkxNzBjMjczZDRhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMTU0NjU3LCJleHAiOjE3MzIxODcwNTd9.WVLByJrFOqqC3GidYddVN48WBgWBOtJGr2wSxpYtvhs'}, 200)
+2024-11-20 21:16:11,021 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjE1NTM3MSwianRpIjoiNDMxYTc2ZjUtMTQyMy00M2RiLTkxODAtYjJmMzc0ZmQzYzgyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMTU1MzcxLCJleHAiOjE3MzIxODc3NzF9.TqepA8S5zOAaF60LbEeU3QSMX1n4uUD9GgD-Zt7YLBs'}, 200)
+2024-11-20 21:16:11,028 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjE1NTM3MSwianRpIjoiNDMxYTc2ZjUtMTQyMy00M2RiLTkxODAtYjJmMzc0ZmQzYzgyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMTU1MzcxLCJleHAiOjE3MzIxODc3NzF9.TqepA8S5zOAaF60LbEeU3QSMX1n4uUD9GgD-Zt7YLBs'}, 200)
+2024-11-20 21:53:31,305 - INFO - User: 1 On: <class 'api.components.profile.profile_logic.ProfileView'> : Success!
+2024-11-20 21:53:31,321 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Perfil actualizado exitosamente!', 'description': 'OK', 'type': 'Success', 'object': {'state': {'key': 'ACTIVO', 'value': 1}, 'code': 'ADMIN', 'userTypes': [1, 2], 'name': 'ADMIN', 'menus': [1, 2, 3, 4, 8, 9, 10, 1010, 1011, 1012, 1013, 1014, 1015, 2015, 2016], 'id': 1}}, 200)
+2024-11-20 21:53:45,038 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjE1NzYyNSwianRpIjoiMWM5YjZiOGQtOGFjMC00YzRiLWE1ZWMtNTIxMDM3OWM4MjY3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMTU3NjI1LCJleHAiOjE3MzIxOTAwMjV9.y-XlkxroU4poaOCfP9qz1Ie_NhmEQdlz37Hs-XF8qQY'}, 200)
+2024-11-20 21:53:45,038 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjE1NzYyNSwianRpIjoiMWM5YjZiOGQtOGFjMC00YzRiLWE1ZWMtNTIxMDM3OWM4MjY3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMTU3NjI1LCJleHAiOjE3MzIxOTAwMjV9.y-XlkxroU4poaOCfP9qz1Ie_NhmEQdlz37Hs-XF8qQY'}, 200)
+2024-11-21 11:28:23,349 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjIwNjUwMywianRpIjoiMjAzZDE5MzEtYjU0NS00MGJmLTg2YjktMDc1ZjcyYjU3YTA2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMjA2NTAzLCJleHAiOjE3MzIyMzg5MDN9.CKK9dtlI8C3TtnBIhDYPwKTGfOI5MYC0VLy2IoRkDt4'}, 200)
+2024-11-21 11:28:23,353 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjIwNjUwMywianRpIjoiMjAzZDE5MzEtYjU0NS00MGJmLTg2YjktMDc1ZjcyYjU3YTA2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMjA2NTAzLCJleHAiOjE3MzIyMzg5MDN9.CKK9dtlI8C3TtnBIhDYPwKTGfOI5MYC0VLy2IoRkDt4'}, 200)
+2024-11-21 11:28:38,285 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjIwNjUxOCwianRpIjoiYTNmZTdiZGItYzlkYi00YTE5LWI4YWMtNGZjZmY4NzFlYmVjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMjA2NTE4LCJleHAiOjE3MzIyMzg5MTh9.wtNvrl6tmu3IVrq-Ov5Yrb4Q0gWx-6NyBJ5WiSqy2Gw'}, 200)
+2024-11-21 11:28:38,286 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjIwNjUxOCwianRpIjoiYTNmZTdiZGItYzlkYi00YTE5LWI4YWMtNGZjZmY4NzFlYmVjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMjA2NTE4LCJleHAiOjE3MzIyMzg5MTh9.wtNvrl6tmu3IVrq-Ov5Yrb4Q0gWx-6NyBJ5WiSqy2Gw'}, 200)
+2024-11-21 12:49:01,223 - ERROR - User: None On: <class 'api.components.product.ProductManager.ProductManager'> : An error occurred: 'product_type' is an invalid keyword argument for Service : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\product\ProductManager.py", line 56, in getProductData
+    new_service = Service(
+  File "<string>", line 4, in __init__
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\state.py", line 480, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\state.py", line 477, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\decl_base.py", line 1142, in _declarative_constructor
+    raise TypeError(
+TypeError: 'product_type' is an invalid keyword argument for Service
+
+2024-11-21 12:49:01,228 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 404, 'message': 'No se pudo obtener la lista!', 'description': 'Not Found', 'type': 'Client_Errors'}, 404)
+2024-11-21 14:07:54,517 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjIxNjA3NCwianRpIjoiODVhYjY1ZGQtYTg1Ni00NTY4LWI0ZDgtMjdmNTM3YzZiMzkwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMjE2MDc0LCJleHAiOjE3MzIyNDg0NzR9.kJ6AbhieDXSAZVFH4RbBC7mDGrKY_sa2rItm6UivVKw'}, 200)
+2024-11-21 14:07:54,519 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjIxNjA3NCwianRpIjoiODVhYjY1ZGQtYTg1Ni00NTY4LWI0ZDgtMjdmNTM3YzZiMzkwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMjE2MDc0LCJleHAiOjE3MzIyNDg0NzR9.kJ6AbhieDXSAZVFH4RbBC7mDGrKY_sa2rItm6UivVKw'}, 200)
+2024-11-21 15:41:46,370 - ERROR - User: None On: <class 'api.components.assignment.AssignmentManager.AssigmentManager'> : An error occurred: 'str' object has no attribute 'id' : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\assignment\AssignmentManager.py", line 23, in appendProducts
+    product_id = int(item.id),
+AttributeError: 'str' object has no attribute 'id'
+
+2024-11-21 15:41:46,377 - ERROR - User: None On: <class 'api.components.assignment.AssignmentManager.AssigmentManager'> : An error occurred: 'str' object has no attribute 'id' : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\assignment\AssignmentManager.py", line 40, in appendServices
+    service_id = int(item.id),
+AttributeError: 'str' object has no attribute 'id'
+
+2024-11-21 15:41:46,379 - INFO - User: 1 On: <class 'api.components.assignment.assignment_logic.AssignmentsView'> : Se han realizado las asignaciones exitosamente!
+2024-11-21 15:41:46,382 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Se han realizado las asignaciones exitosamente!', 'description': 'Created', 'type': 'Success'}, 201)
+2024-11-21 15:52:26,893 - ERROR - User: None On: <class 'api.components.assignment.AssignmentManager.AssigmentManager'> : An error occurred: 'int' object has no attribute 'id' : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\assignment\AssignmentManager.py", line 23, in appendProducts
+    product_id = int(item.id),
+AttributeError: 'int' object has no attribute 'id'
+
+2024-11-21 15:52:26,900 - ERROR - User: None On: <class 'api.components.assignment.AssignmentManager.AssigmentManager'> : An error occurred: 'int' object has no attribute 'id' : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\assignment\AssignmentManager.py", line 40, in appendServices
+    service_id = int(item.id),
+AttributeError: 'int' object has no attribute 'id'
+
+2024-11-21 15:52:26,901 - INFO - User: 1 On: <class 'api.components.assignment.assignment_logic.AssignmentsView'> : Se han realizado las asignaciones exitosamente!
+2024-11-21 15:52:26,903 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Se han realizado las asignaciones exitosamente!', 'description': 'Created', 'type': 'Success'}, 201)
+2024-11-21 15:54:25,742 - ERROR - User: None On: <class 'api.components.assignment.AssignmentManager.AssigmentManager'> : An error occurred: 'int' object has no attribute 'get' : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\assignment\AssignmentManager.py", line 24, in appendProducts
+    product_id = int(item.get("id")),
+AttributeError: 'int' object has no attribute 'get'
+
+2024-11-21 15:54:25,749 - ERROR - User: None On: <class 'api.components.assignment.AssignmentManager.AssigmentManager'> : An error occurred: 'int' object has no attribute 'get' : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\assignment\AssignmentManager.py", line 41, in appendServices
+    service_id = int(item.get("id")),
+AttributeError: 'int' object has no attribute 'get'
+
+2024-11-21 15:54:25,751 - INFO - User: 1 On: <class 'api.components.assignment.assignment_logic.AssignmentsView'> : Se han realizado las asignaciones exitosamente!
+2024-11-21 15:54:25,753 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Se han realizado las asignaciones exitosamente!', 'description': 'Created', 'type': 'Success'}, 201)
+2024-11-21 15:55:54,890 - ERROR - User: None On: <class 'api.components.assignment.AssignmentManager.AssigmentManager'> : An error occurred: 'int' object has no attribute 'get' : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\assignment\AssignmentManager.py", line 24, in appendProducts
+    product_id = int(item.get("id")),
+AttributeError: 'int' object has no attribute 'get'
+
+2024-11-21 15:55:54,892 - INFO - User: 1 On: <class 'api.components.assignment.assignment_logic.AssignmentsView'> : Se han realizado las asignaciones exitosamente!
+2024-11-21 15:55:54,893 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Se han realizado las asignaciones exitosamente!', 'description': 'Created', 'type': 'Success'}, 201)
+2024-11-21 15:57:30,064 - INFO - User: 1 On: <class 'api.components.assignment.assignment_logic.AssignmentsView'> : Se han realizado las asignaciones exitosamente!
+2024-11-21 15:57:30,065 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Se han realizado las asignaciones exitosamente!', 'description': 'Created', 'type': 'Success'}, 201)
+2024-11-21 17:18:14,045 - INFO - User: 1 On: <class 'api.components.assignment.assignment_logic.AssignmentsView'> : Se han realizado las asignaciones exitosamente!
+2024-11-21 17:18:14,047 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Se han realizado las asignaciones exitosamente!', 'description': 'Created', 'type': 'Success'}, 201)
+2024-11-21 17:23:21,876 - INFO - User: 1 On: <class 'api.components.assignment.assignment_logic.AssignmentsView'> : Se han realizado las asignaciones exitosamente!
+2024-11-21 17:23:21,877 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Se han realizado las asignaciones exitosamente!', 'description': 'Created', 'type': 'Success'}, 201)
+2024-11-21 21:28:07,950 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjI0MjQ4NywianRpIjoiODgzMzE3YzAtM2I1ZC00YjlkLTg0YTYtMTIxZWM1ZWMzZGVjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMjQyNDg3LCJleHAiOjE3MzIyNzQ4ODd9.cBBQETSkRCrRMc-sAcxd0hkSXUOyFVB2Ac35S2BICHs'}, 200)
+2024-11-21 21:28:07,953 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjI0MjQ4NywianRpIjoiODgzMzE3YzAtM2I1ZC00YjlkLTg0YTYtMTIxZWM1ZWMzZGVjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMjQyNDg3LCJleHAiOjE3MzIyNzQ4ODd9.cBBQETSkRCrRMc-sAcxd0hkSXUOyFVB2Ac35S2BICHs'}, 200)
+2024-11-21 22:01:35,115 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjI0NDQ5NSwianRpIjoiYmQwNDNjZmYtZjQ1Yy00MjZjLTk0ODYtOGRjZDJmNWEyZTNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMjQ0NDk1LCJleHAiOjE3MzIyNzY4OTV9.7DNMte9zj_l0a6d2UZKSk245f3PchzXY5xw0icK1i4o'}, 200)
+2024-11-21 22:01:35,117 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjI0NDQ5NSwianRpIjoiYmQwNDNjZmYtZjQ1Yy00MjZjLTk0ODYtOGRjZDJmNWEyZTNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMjQ0NDk1LCJleHAiOjE3MzIyNzY4OTV9.7DNMte9zj_l0a6d2UZKSk245f3PchzXY5xw0icK1i4o'}, 200)
+2024-11-21 23:36:08,711 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjI1MDE2OCwianRpIjoiMzQzOTc0NGYtYzFlZi00ZDVjLWE5NzgtNjAzN2JkOGEzOTcwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMjUwMTY4LCJleHAiOjE3MzIyODI1Njh9.zBE8Jl4yPOvJwOVKdu8IG4TkDxII8BdM-c7E7gnXDU8'}, 200)
+2024-11-21 23:36:08,711 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjI1MDE2OCwianRpIjoiMzQzOTc0NGYtYzFlZi00ZDVjLWE5NzgtNjAzN2JkOGEzOTcwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMjUwMTY4LCJleHAiOjE3MzIyODI1Njh9.zBE8Jl4yPOvJwOVKdu8IG4TkDxII8BdM-c7E7gnXDU8'}, 200)
+2024-11-22 00:58:16,411 - INFO - User: 1 On: <class 'api.components.assignment.assignment_logic.AssignmentsView'> : Se han realizado las asignaciones exitosamente!
+2024-11-22 00:58:16,414 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Se han realizado las asignaciones exitosamente!', 'description': 'Created', 'type': 'Success'}, 201)
+2024-11-22 00:58:30,394 - ERROR - User: None On: <class 'api.components.product.ProductManager.ProductManager'> : An error occurred: (pyodbc.DataError) ('22018', "[22018] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Conversion failed when converting the varchar value 'Yjbqjzl4vU8rKdLN' to data type int. (245) (SQLExecDirectW)")
+[SQL: SELECT product.id_product AS product_id_product, product.code AS product_code, product.name AS product_name, product.pvp1 AS product_pvp1, CASE WHEN (product_assignment_1.value IS NOT NULL) THEN product_assignment_1.value ELSE product.pvp1 END AS price 
+FROM product LEFT OUTER JOIN product_assignment AS product_assignment_1 ON product_assignment_1.product_id = product.id_product 
+WHERE product_assignment_1.client_id = ?]
+[parameters: ('1',)]
+(Background on this error at: https://sqlalche.me/e/14/9h9h) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.DataError: ('22018', "[22018] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Conversion failed when converting the varchar value 'Yjbqjzl4vU8rKdLN' to data type int. (245) (SQLExecDirectW)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\product\ProductManager.py", line 99, in findProductsAndAssignments
+    results = query.all()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 2711, in all
+    return self._iter().all()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 2846, in _iter
+    result = self.session.execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1689, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1611, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1478, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2023, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (pyodbc.DataError) ('22018', "[22018] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Conversion failed when converting the varchar value 'Yjbqjzl4vU8rKdLN' to data type int. (245) (SQLExecDirectW)")
+[SQL: SELECT product.id_product AS product_id_product, product.code AS product_code, product.name AS product_name, product.pvp1 AS product_pvp1, CASE WHEN (product_assignment_1.value IS NOT NULL) THEN product_assignment_1.value ELSE product.pvp1 END AS price 
+FROM product LEFT OUTER JOIN product_assignment AS product_assignment_1 ON product_assignment_1.product_id = product.id_product 
+WHERE product_assignment_1.client_id = ?]
+[parameters: ('1',)]
+(Background on this error at: https://sqlalche.me/e/14/9h9h)
+
+2024-11-22 01:00:18,063 - ERROR - User: None On: <class 'api.components.product.ProductManager.ProductManager'> : An error occurred: (pyodbc.DataError) ('22018', "[22018] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Conversion failed when converting the varchar value 'Yjbqjzl4vU8rKdLN' to data type int. (245) (SQLExecDirectW)")
+[SQL: SELECT product.id_product AS product_id_product, product.code AS product_code, product.name AS product_name, product.pvp1 AS product_pvp1, CASE WHEN (product_assignment_1.value IS NOT NULL) THEN product_assignment_1.value ELSE product.pvp1 END AS price 
+FROM product LEFT OUTER JOIN product_assignment AS product_assignment_1 ON product_assignment_1.product_id = product.id_product 
+WHERE product_assignment_1.client_id = ?]
+[parameters: ('1',)]
+(Background on this error at: https://sqlalche.me/e/14/9h9h) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.DataError: ('22018', "[22018] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Conversion failed when converting the varchar value 'Yjbqjzl4vU8rKdLN' to data type int. (245) (SQLExecDirectW)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\product\ProductManager.py", line 99, in findProductsAndAssignments
+    results = query.all()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 2711, in all
+    return self._iter().all()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 2846, in _iter
+    result = self.session.execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1689, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1611, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1478, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2023, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (pyodbc.DataError) ('22018', "[22018] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Conversion failed when converting the varchar value 'Yjbqjzl4vU8rKdLN' to data type int. (245) (SQLExecDirectW)")
+[SQL: SELECT product.id_product AS product_id_product, product.code AS product_code, product.name AS product_name, product.pvp1 AS product_pvp1, CASE WHEN (product_assignment_1.value IS NOT NULL) THEN product_assignment_1.value ELSE product.pvp1 END AS price 
+FROM product LEFT OUTER JOIN product_assignment AS product_assignment_1 ON product_assignment_1.product_id = product.id_product 
+WHERE product_assignment_1.client_id = ?]
+[parameters: ('1',)]
+(Background on this error at: https://sqlalche.me/e/14/9h9h)
+
+2024-11-22 11:48:42,064 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjI5NDEyMiwianRpIjoiYTdkNWZlMzUtNGRmMS00ODdmLWE5MDMtODBiNDIxM2Q0NmQ0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMjk0MTIyLCJleHAiOjE3MzIzMjY1MjJ9.QEyLpbjBxLOtdrFv83ixENATPsa7vPIKxpTxBJOYep8'}, 200)
+2024-11-22 11:48:42,068 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjI5NDEyMiwianRpIjoiYTdkNWZlMzUtNGRmMS00ODdmLWE5MDMtODBiNDIxM2Q0NmQ0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMjk0MTIyLCJleHAiOjE3MzIzMjY1MjJ9.QEyLpbjBxLOtdrFv83ixENATPsa7vPIKxpTxBJOYep8'}, 200)
+2024-11-22 11:48:51,131 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjI5NDEzMSwianRpIjoiZDY1N2U4ZWQtZDZmNi00ZmFhLWFiMDItYWM3ZTJhMjExZTE4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMjk0MTMxLCJleHAiOjE3MzIzMjY1MzF9.2OGeArFwPz8m-1Q6LoUfBoa1wPB8IpwWzcg-P5ZZz3c'}, 200)
+2024-11-22 11:48:51,132 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjI5NDEzMSwianRpIjoiZDY1N2U4ZWQtZDZmNi00ZmFhLWFiMDItYWM3ZTJhMjExZTE4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMjk0MTMxLCJleHAiOjE3MzIzMjY1MzF9.2OGeArFwPz8m-1Q6LoUfBoa1wPB8IpwWzcg-P5ZZz3c'}, 200)
+2024-11-22 11:51:29,783 - ERROR - User: None On: <class 'api.components.product.ProductManager.ProductManager'> : An error occurred: (pyodbc.DataError) ('22018', "[22018] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Conversion failed when converting the varchar value 'Yjbqjzl4vU8rKdLN' to data type int. (245) (SQLExecDirectW)")
+[SQL: SELECT product.id_product AS product_id_product, product.code AS product_code, product.name AS product_name, product.pvp1 AS product_pvp1, CASE WHEN (product_assignment_1.value IS NOT NULL) THEN product_assignment_1.value ELSE product.pvp1 END AS price 
+FROM product LEFT OUTER JOIN product_assignment AS product_assignment_1 ON product_assignment_1.product_id = product.id_product 
+WHERE product_assignment_1.client_id = ?]
+[parameters: ('1',)]
+(Background on this error at: https://sqlalche.me/e/14/9h9h) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.DataError: ('22018', "[22018] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Conversion failed when converting the varchar value 'Yjbqjzl4vU8rKdLN' to data type int. (245) (SQLExecDirectW)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\product\ProductManager.py", line 99, in findProductsAndAssignments
+    results = query.all()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 2711, in all
+    return self._iter().all()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 2846, in _iter
+    result = self.session.execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1689, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1611, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1478, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2023, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (pyodbc.DataError) ('22018', "[22018] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Conversion failed when converting the varchar value 'Yjbqjzl4vU8rKdLN' to data type int. (245) (SQLExecDirectW)")
+[SQL: SELECT product.id_product AS product_id_product, product.code AS product_code, product.name AS product_name, product.pvp1 AS product_pvp1, CASE WHEN (product_assignment_1.value IS NOT NULL) THEN product_assignment_1.value ELSE product.pvp1 END AS price 
+FROM product LEFT OUTER JOIN product_assignment AS product_assignment_1 ON product_assignment_1.product_id = product.id_product 
+WHERE product_assignment_1.client_id = ?]
+[parameters: ('1',)]
+(Background on this error at: https://sqlalche.me/e/14/9h9h)
+
+2024-11-22 11:53:24,971 - ERROR - User: None On: <class 'api.components.product.ProductManager.ProductManager'> : An error occurred: Could not locate column in row for column 'id_product' : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\product\ProductManager.py", line 103, in findProductsAndAssignments
+    'id_product': result.id_product,
+AttributeError: Could not locate column in row for column 'id_product'
+
+2024-11-22 12:16:15,572 - ERROR - User: None On: <class 'api.components.product.ProductManager.ProductManager'> : An error occurred: (sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter 'id_client'
+[SQL: SELECT 
+    p.id,
+    p.code,
+    p.name,
+    p.pvp1,
+   
+    CASE
+        WHEN pa.value IS NOT NULL THEN pa.value 
+        ELSE p.pvp1                               
+    END AS price
+FROM 
+    Product p
+LEFT JOIN 
+    product_assignment pa ON pa.product_id = p.id 
+	AND pa.client_id = ?]
+[parameters: [{'client_id': '1'}]]
+(Background on this error at: https://sqlalche.me/e/14/cd3x) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1699, in _execute_context
+    context = constructor(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 980, in _init_compiled
+    self.compiled_parameters = [
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 981, in <listcomp>
+    compiled.construct_params(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\compiler.py", line 968, in construct_params
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: A value is required for bind parameter 'id_client' (Background on this error at: https://sqlalche.me/e/14/cd3x)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\product\ProductManager.py", line 113, in findProductsAndAssignments
+    results = db.session.execute(sql_query, {'client_id': id_client}).fetchall()
+  File "<string>", line 2, in execute
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1689, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1611, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1478, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1705, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2023, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1699, in _execute_context
+    context = constructor(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 980, in _init_compiled
+    self.compiled_parameters = [
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 981, in <listcomp>
+    compiled.construct_params(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\compiler.py", line 968, in construct_params
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.StatementError: (sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter 'id_client'
+[SQL: SELECT 
+    p.id,
+    p.code,
+    p.name,
+    p.pvp1,
+   
+    CASE
+        WHEN pa.value IS NOT NULL THEN pa.value 
+        ELSE p.pvp1                               
+    END AS price
+FROM 
+    Product p
+LEFT JOIN 
+    product_assignment pa ON pa.product_id = p.id 
+	AND pa.client_id = ?]
+[parameters: [{'client_id': '1'}]]
+(Background on this error at: https://sqlalche.me/e/14/cd3x)
+
+2024-11-22 21:27:28,178 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjMyODg0OCwianRpIjoiNjllNzkyZDctYjIyMC00MzYwLWFkNTctMTYwNTdmMzQ5N2RhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMzI4ODQ4LCJleHAiOjE3MzIzNjEyNDh9.9mDlWrvwb9pwqL5fpOwxd6YHxcYWxcf7l1mZbV39Bgw'}, 200)
+2024-11-22 21:27:28,180 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjMyODg0OCwianRpIjoiNjllNzkyZDctYjIyMC00MzYwLWFkNTctMTYwNTdmMzQ5N2RhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyMzI4ODQ4LCJleHAiOjE3MzIzNjEyNDh9.9mDlWrvwb9pwqL5fpOwxd6YHxcYWxcf7l1mZbV39Bgw'}, 200)
+2024-11-23 19:17:30,072 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjQwNzQ1MCwianRpIjoiODMzNjU5NzQtNzQ0NS00YWFmLWE0MTYtMDk1MThjYWQ1NDdiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyNDA3NDUwLCJleHAiOjE3MzI0Mzk4NTB9.DVQes5bQuwvIW2vPRdY6TWMEBWqVQxWwNrw-RD-x9UE'}, 200)
+2024-11-23 19:17:30,080 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjQwNzQ1MCwianRpIjoiODMzNjU5NzQtNzQ0NS00YWFmLWE0MTYtMDk1MThjYWQ1NDdiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyNDA3NDUwLCJleHAiOjE3MzI0Mzk4NTB9.DVQes5bQuwvIW2vPRdY6TWMEBWqVQxWwNrw-RD-x9UE'}, 200)
+2024-11-24 13:31:30,090 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjQ3MzA5MCwianRpIjoiOWZmYmIyMTItOWQ4Ni00YWRkLWFiMWQtMDMyNDcxMjU1ZGFhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyNDczMDkwLCJleHAiOjE3MzI1MDU0OTB9.-imPKg8OKzLKl7hwFNJj-1EbmPOfvb4bVE2vPzNLuQE'}, 200)
+2024-11-24 13:31:30,098 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjQ3MzA5MCwianRpIjoiOWZmYmIyMTItOWQ4Ni00YWRkLWFiMWQtMDMyNDcxMjU1ZGFhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyNDczMDkwLCJleHAiOjE3MzI1MDU0OTB9.-imPKg8OKzLKl7hwFNJj-1EbmPOfvb4bVE2vPzNLuQE'}, 200)
+2024-11-25 09:53:26,340 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjU0NjQwNiwianRpIjoiYjMxMTdlY2EtOTg1ZS00MzYxLThiMmEtMmYyZDc5MTk5NjYwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyNTQ2NDA2LCJleHAiOjE3MzI1Nzg4MDZ9.BAdd5sgui4qIHPwt2C2QQk8i3Bh4Y7bqHfETSITJgF8'}, 200)
+2024-11-25 09:53:26,343 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjU0NjQwNiwianRpIjoiYjMxMTdlY2EtOTg1ZS00MzYxLThiMmEtMmYyZDc5MTk5NjYwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyNTQ2NDA2LCJleHAiOjE3MzI1Nzg4MDZ9.BAdd5sgui4qIHPwt2C2QQk8i3Bh4Y7bqHfETSITJgF8'}, 200)
+2024-11-25 09:55:50,178 - ERROR - User: None On: <class 'api.components.bill.BillManager.BillManager'> : An error occurred: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (('1', '2', 10, 1, 15, 0, 0, 10, 11.5), ('1', '5', 15, 1, 15, 0, 0, 15, 17.25))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1779, in _execute_context
+    self.dialect.do_executemany(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\dialects\mssql\pyodbc.py", line 550, in do_executemany
+    super(MSDialect_pyodbc, self).do_executemany(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 714, in do_executemany
+    cursor.executemany(statement, parameters)
+pyodbc.IntegrityError: ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\bill\BillManager.py", line 37, in appendDetails
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3339, in flush
+    self._flush(objects)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3479, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3439, in _flush
+    flush_context.execute()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 242, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1094, in _emit_insert_statements
+    c = connection._execute_20(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1611, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1478, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2023, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1779, in _execute_context
+    self.dialect.do_executemany(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\dialects\mssql\pyodbc.py", line 550, in do_executemany
+    super(MSDialect_pyodbc, self).do_executemany(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 714, in do_executemany
+    cursor.executemany(statement, parameters)
+sqlalchemy.exc.IntegrityError: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (('1', '2', 10, 1, 15, 0, 0, 10, 11.5), ('1', '5', 15, 1, 15, 0, 0, 15, 17.25))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+
+2024-11-25 09:58:44,980 - ERROR - User: None On: <class 'api.components.bill.BillManager.BillManager'> : An error occurred: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (('1', '2', 10, 1, 15, 0, 0, 10, 11.5), ('1', '5', 15, 1, 15, 0, 0, 15, 17.25))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1779, in _execute_context
+    self.dialect.do_executemany(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\dialects\mssql\pyodbc.py", line 550, in do_executemany
+    super(MSDialect_pyodbc, self).do_executemany(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 714, in do_executemany
+    cursor.executemany(statement, parameters)
+pyodbc.IntegrityError: ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\bill\BillManager.py", line 37, in appendDetails
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3339, in flush
+    self._flush(objects)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3479, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3439, in _flush
+    flush_context.execute()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 242, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1094, in _emit_insert_statements
+    c = connection._execute_20(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1611, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1478, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2023, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1779, in _execute_context
+    self.dialect.do_executemany(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\dialects\mssql\pyodbc.py", line 550, in do_executemany
+    super(MSDialect_pyodbc, self).do_executemany(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 714, in do_executemany
+    cursor.executemany(statement, parameters)
+sqlalchemy.exc.IntegrityError: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (('1', '2', 10, 1, 15, 0, 0, 10, 11.5), ('1', '5', 15, 1, 15, 0, 0, 15, 17.25))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+
+2024-11-25 09:58:57,572 - ERROR - User: None On: <class 'api.components.bill.BillManager.BillManager'> : An error occurred: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (('1', '2', 10, 1, 15, 0, 0, 10, 11.5), ('1', '5', 15, 1, 15, 0, 0, 15, 17.25))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1779, in _execute_context
+    self.dialect.do_executemany(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\dialects\mssql\pyodbc.py", line 550, in do_executemany
+    super(MSDialect_pyodbc, self).do_executemany(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 714, in do_executemany
+    cursor.executemany(statement, parameters)
+pyodbc.IntegrityError: ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\bill\BillManager.py", line 37, in appendDetails
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3339, in flush
+    self._flush(objects)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3479, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3439, in _flush
+    flush_context.execute()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 242, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1094, in _emit_insert_statements
+    c = connection._execute_20(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1611, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1478, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2023, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1779, in _execute_context
+    self.dialect.do_executemany(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\dialects\mssql\pyodbc.py", line 550, in do_executemany
+    super(MSDialect_pyodbc, self).do_executemany(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 714, in do_executemany
+    cursor.executemany(statement, parameters)
+sqlalchemy.exc.IntegrityError: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (('1', '2', 10, 1, 15, 0, 0, 10, 11.5), ('1', '5', 15, 1, 15, 0, 0, 15, 17.25))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+
+2024-11-25 09:59:15,418 - ERROR - User: None On: <class 'api.components.bill.BillManager.BillManager'> : An error occurred: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (('1', '2', 10, 1, 15, 0, 0, 10, 11.5), ('1', '5', 15, 1, 15, 0, 0, 15, 17.25))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1779, in _execute_context
+    self.dialect.do_executemany(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\dialects\mssql\pyodbc.py", line 550, in do_executemany
+    super(MSDialect_pyodbc, self).do_executemany(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 714, in do_executemany
+    cursor.executemany(statement, parameters)
+pyodbc.IntegrityError: ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\bill\BillManager.py", line 37, in appendDetails
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3339, in flush
+    self._flush(objects)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3479, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3439, in _flush
+    flush_context.execute()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 242, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1094, in _emit_insert_statements
+    c = connection._execute_20(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1611, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1478, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2023, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1779, in _execute_context
+    self.dialect.do_executemany(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\dialects\mssql\pyodbc.py", line 550, in do_executemany
+    super(MSDialect_pyodbc, self).do_executemany(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 714, in do_executemany
+    cursor.executemany(statement, parameters)
+sqlalchemy.exc.IntegrityError: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (('1', '2', 10, 1, 15, 0, 0, 10, 11.5), ('1', '5', 15, 1, 15, 0, 0, 15, 17.25))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+
+2024-11-25 10:00:45,398 - ERROR - User: None On: <class 'api.components.bill.BillManager.BillManager'> : An error occurred: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.IntegrityError: ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\bill\BillManager.py", line 37, in appendDetails
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3339, in flush
+    self._flush(objects)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3479, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3439, in _flush
+    flush_context.execute()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 242, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1094, in _emit_insert_statements
+    c = connection._execute_20(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1611, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1478, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2023, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+
+2024-11-25 10:06:24,450 - ERROR - User: None On: <class 'api.components.bill.BillManager.BillManager'> : An error occurred: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.IntegrityError: ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\bill\BillManager.py", line 37, in appendDetails
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3339, in flush
+    self._flush(objects)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3479, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3439, in _flush
+    flush_context.execute()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 242, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1094, in _emit_insert_statements
+    c = connection._execute_20(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1611, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1478, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2023, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+
+2024-11-25 10:08:15,212 - ERROR - User: None On: <class 'api.components.bill.BillManager.BillManager'> : An error occurred: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.IntegrityError: ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\bill\BillManager.py", line 37, in appendDetails
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3339, in flush
+    self._flush(objects)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3479, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3439, in _flush
+    flush_context.execute()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 242, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1094, in _emit_insert_statements
+    c = connection._execute_20(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1611, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1478, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2023, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+
+2024-11-25 10:08:15,233 - ERROR - User: None On: <class 'api.components.bill.BillManager.BillManager'> : An error occurred: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\logic\ModelManager.py", line 19, in create
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 827, in commit
+    self._assert_active(prepared_ok=True)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 601, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+
+2024-11-25 10:08:15,269 - ERROR - User: None On: <class 'api.components.bill.BillManager.BillManager'> : An error occurred: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\bill\BillManager.py", line 22, in appendDetails
+    BillDetail.query.filter(BillDetail.bill_id==bill_id).delete()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 3136, in delete
+    result = self.session.execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1637, in execute
+    ) = compile_state_cls.orm_pre_session_exec(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1801, in orm_pre_session_exec
+    session._autoflush()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2222, in _autoflush
+    self.flush()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3339, in flush
+    self._flush(objects)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3435, in _flush
+    flush_context.transaction = transaction = self.begin(_subtrans=True)
+  File "<string>", line 2, in begin
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\deprecations.py", line 298, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1319, in begin
+    trans = self._transaction._begin(nested=nested)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 629, in _begin
+    self._assert_active()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 601, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+
+2024-11-25 10:08:15,279 - INFO - User: 1 On: <class 'api.components.bill.bill_logic.BillsView'> : Success!
+2024-11-25 10:20:26,286 - ERROR - User: None On: <class 'api.components.bill.BillManager.BillManager'> : An error occurred: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.IntegrityError: ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\bill\BillManager.py", line 37, in appendDetails
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3339, in flush
+    self._flush(objects)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3479, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3439, in _flush
+    flush_context.execute()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 242, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1094, in _emit_insert_statements
+    c = connection._execute_20(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1611, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1478, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2023, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+
+2024-11-25 10:20:26,297 - ERROR - User: None On: <class 'api.components.bill.BillManager.BillManager'> : An error occurred: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\logic\ModelManager.py", line 19, in create
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 827, in commit
+    self._assert_active(prepared_ok=True)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 601, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+
+2024-11-25 10:20:26,304 - ERROR - User: None On: <class 'api.components.bill.BillManager.BillManager'> : An error occurred: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\bill\BillManager.py", line 22, in appendDetails
+    BillDetail.query.filter(BillDetail.bill_id==bill_id).delete()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 3136, in delete
+    result = self.session.execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1637, in execute
+    ) = compile_state_cls.orm_pre_session_exec(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1801, in orm_pre_session_exec
+    session._autoflush()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2222, in _autoflush
+    self.flush()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3339, in flush
+    self._flush(objects)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3435, in _flush
+    flush_context.transaction = transaction = self.begin(_subtrans=True)
+  File "<string>", line 2, in begin
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\deprecations.py", line 298, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1319, in begin
+    trans = self._transaction._begin(nested=nested)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 629, in _begin
+    self._assert_active()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 601, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+
+2024-11-25 10:20:26,309 - INFO - User: 1 On: <class 'api.components.bill.bill_logic.BillsView'> : Success!
+2024-11-25 10:24:43,533 - ERROR - User: None On: <class 'api.components.bill.BillManager.BillManager'> : An error occurred: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.IntegrityError: ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\bill\BillManager.py", line 38, in appendDetails
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3339, in flush
+    self._flush(objects)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3479, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3439, in _flush
+    flush_context.execute()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 242, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1094, in _emit_insert_statements
+    c = connection._execute_20(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1611, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1478, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2023, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+
+2024-11-25 10:24:43,542 - ERROR - User: None On: <class 'api.components.bill.BillManager.BillManager'> : An error occurred: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\logic\ModelManager.py", line 19, in create
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 827, in commit
+    self._assert_active(prepared_ok=True)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 601, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+
+2024-11-25 10:24:43,548 - ERROR - User: None On: <class 'api.components.bill.BillManager.BillManager'> : An error occurred: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\bill\BillManager.py", line 23, in appendDetails
+    BillDetail.query.filter(BillDetail.bill_id==bill_id).delete()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 3136, in delete
+    result = self.session.execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1637, in execute
+    ) = compile_state_cls.orm_pre_session_exec(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1801, in orm_pre_session_exec
+    session._autoflush()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2222, in _autoflush
+    self.flush()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3339, in flush
+    self._flush(objects)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 3435, in _flush
+    flush_context.transaction = transaction = self.begin(_subtrans=True)
+  File "<string>", line 2, in begin
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\deprecations.py", line 298, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1319, in begin
+    trans = self._transaction._begin(nested=nested)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 629, in _begin
+    self._assert_active()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 601, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__bill_deta__bill___22CA2527". The conflict occurred in database "cr_test", table "dbo.bill", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: INSERT INTO bill_detail (bill_id, product_id, price, quantity, iva, discount, [discountTotal], subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('1', '2', 10, 1, 15, 0, 0, 10, 11.5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+
+2024-11-25 10:24:43,553 - INFO - User: 1 On: <class 'api.components.bill.bill_logic.BillsView'> : Success!
+2024-11-25 10:25:49,633 - INFO - User: 1 On: <class 'api.components.bill.bill_logic.BillsView'> : Success!
+2024-11-25 10:25:49,710 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 201, 'message': 'Documento creado exitosamente!', 'description': 'Created', 'type': 'Success', 'object': {'subtotal_12': 10.0, 'seller': None, 'iva': 1.5, 'client': {'is_foreign': False, 'addresses': [{'client': 1, 'address': 'De los Helechos', 'state': {'key': 'ACTIVO', 'value': 1}, 'id': 1, 'location': 'NORTE', 'default': True}], 'category': None, 'type': {'key': 'N', 'value': 'Natural'}, 'parish': 'Kennedy', 'bills': [1], 'source_income': 'Empleado Privado', 'ruc': '1722210976001', 'name': 'Carlos Pinto', 'civil_state': 'Soltero', 'sex': 'Masculino', 'special_taxpayer': False, 'events': [], 'default_phone': '099999999', 'default_address': 'De los Helechos', 'province': 'PICHINCHA', 'comercial_name': 'Carlos Pinto vACACE', 'contacts': [{'client': 1, 'area': 'TEST', 'state': {'key': 'ACTIVO', 'value': 1}, 'id': 2, 'contact': '099999999', 'default': True}], 'canton': 'QUITO', 'id_client': None, 'identification': '1722210976', 'state': {'key': 'ACTIVO', 'value': 1}, 'id': 1, 'email': 'pintoandres@gmail.com', 'payment_method': {'days': 15, 'client': 1, 'max_amount': 0.0, 'type': {'key': 'Credito', 'value': 2}, 'state': {'key': 'ACTIVO', 'value': 1}, 'id': 1}}, 'aditional2': None, 'document_type': {'key': 'FAC', 'value': 'Factura'}, 'authorization': None, 'description': 'asdfasdfasdfasdf', 'subtotal_0': 0.0, 'document_state': None, 'aditional1': None, 'ice': None, 'total': 11.5, 'state': {'key': 'ACTIVO', 'value': 1}, 'service': None, 'details': [{'bill_id': 1, 'product_id': 2}], 'box_id': None, 'id': 1, 'issue_date': '2024-11-25', 'document': '11111111111111111', 'is_sended': False}}, 201)
+2024-11-25 13:02:29,771 - ERROR - User: None On: <class 'api.components.client.ClientManager.ClientManager'> : An error occurred: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The DELETE statement conflicted with the REFERENCE constraint "FK__product_a__clien__04459E07". The conflict occurred in database "cr_test", table "dbo.product_assignment", column \'client_id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: DELETE FROM client]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) : Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.IntegrityError: ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The DELETE statement conflicted with the REFERENCE constraint "FK__product_a__clien__04459E07". The conflict occurred in database "cr_test", table "dbo.product_assignment", column \'client_id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pinto\Documents\personales\projects\cr\cr_api\api\components\client\ClientManager.py", line 27, in getClientData
+    db.session.query(self.model).delete()
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 3136, in delete
+    result = self.session.execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1689, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1611, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1478, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2023, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\pinto\Documents\personales\projects\CR\cr_api\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The DELETE statement conflicted with the REFERENCE constraint "FK__product_a__clien__04459E07". The conflict occurred in database "cr_test", table "dbo.product_assignment", column \'client_id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+[SQL: DELETE FROM client]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+
+2024-11-25 13:02:29,777 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 404, 'message': 'No se pudo obtener la lista!', 'description': 'Not Found', 'type': 'Client_Errors'}, 404)
+2024-11-25 22:37:25,139 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 401, 'message': 'El usuario o la contraseña son incorrectos!', 'description': 'Unauthorized', 'type': 'Client_Errors'}, 401)
+2024-11-25 22:37:25,147 - ERROR - User: None On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 401, 'message': 'El usuario o la contraseña son incorrectos!', 'description': 'Unauthorized', 'type': 'Client_Errors'}, 401)
+2024-11-25 22:38:12,512 - INFO - User: None On: <class 'api.utilities.responses.response.WebResponse'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjU5MjI5MiwianRpIjoiNThlZTRlNTEtMWYyZS00Mjk3LWJiNDMtN2M1OWU2MGRhOTkzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyNTkyMjkyLCJleHAiOjE3MzI2MjQ2OTJ9.fjxG9SV9KDW_4t37X2nUlugBx5Jh5OsSyz2VBIBENSw'}, 200)
+2024-11-25 22:38:12,521 - INFO - User: 1 On: <class 'api.components.user.user_logic.LoginView'> : ({'code': 200, 'message': 'Ingreso exitoso!', 'description': 'OK', 'type': 'Success', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjU5MjI5MiwianRpIjoiNThlZTRlNTEtMWYyZS00Mjk3LWJiNDMtN2M1OWU2MGRhOTkzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzMyNTkyMjkyLCJleHAiOjE3MzI2MjQ2OTJ9.fjxG9SV9KDW_4t37X2nUlugBx5Jh5OsSyz2VBIBENSw'}, 200)

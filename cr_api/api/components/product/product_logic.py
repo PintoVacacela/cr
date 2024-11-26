@@ -40,3 +40,24 @@ class ProductsView(Resource):
         products = self.manager.findAll()
         return [product_schema.dump(item) for item in products],200
     
+class ServicesView(Resource):
+    def __init__(self):
+        self.log = LoggerFactory().get_logger(self.__class__)
+        self.manager = ProductManager()
+
+    @jwt_required()
+    def get(self):
+        products = self.manager.findProductsPerType("SER")
+        return [product_schema.dump(item) for item in products],200
+    
+class ClientProductView(Resource):
+
+    def __init__(self):
+        self.log = LoggerFactory().get_logger(self.__class__)
+        self.manager = ProductManager()
+
+    @jwt_required()
+    def get(self, id_client):
+        print(id_client)
+        return self.manager.findProductsAndAssignments(id_client)
+    

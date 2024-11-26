@@ -13,6 +13,7 @@ class PaymentType(Enum):
     Contado = 1
     Credito = 2
 
+
 class Client(BasicModel):
     id_client=db.Column(db.String(16))
     type = db.Column(db.Enum(ClientType), default='N')
@@ -37,6 +38,8 @@ class Client(BasicModel):
     category_id = db.Column(db.Integer, db.ForeignKey("client_category.id"))
     category = db.relationship("ClientCategory", back_populates="clients")
     events = db.relationship('Event')
+    bills = db.relationship('Bill')
+
 
 class ContactInfo(BasicModel):
     area = db.Column(db.String(100))
@@ -65,6 +68,11 @@ class ClientCategory(BasicModel):
     name = db.Column(db.String(100))
     parent_id = db.Column(db.Integer)
     clients = db.relationship('Client')
+
+
+
+
+
 
 
     

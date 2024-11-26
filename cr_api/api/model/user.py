@@ -28,6 +28,7 @@ class ApplicationUser(BasicModel):
     profile = db.relationship("Profile", back_populates="users")
     notifications = db.relationship('UserNotification')
     events = db.relationship('Event', secondary='event_user', back_populates='users')
+    bills = db.relationship('Bill')
     
 
 

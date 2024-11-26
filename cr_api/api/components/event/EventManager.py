@@ -36,7 +36,7 @@ class EventManager (ModelManager):
             for item in services:
                 new_item = EventService(
                     event_id = event.id,
-                    service_id = int(item)
+                    product_id = int(item)
                 )
                 db.session.add(new_item)
                 db.session.commit()

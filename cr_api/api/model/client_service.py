@@ -20,12 +20,6 @@ class frecuency(Enum):
     Semanalmente = 1
     Mensualmente = 2
     
-class Service(BasicModel):
-    name = db.Column(db.String(100), nullable=False)
-    description = db.Column(db.String(600))
-    price = db.Column(db.Float) 
-    code = db.Column(db.String(200))
-    events = db.relationship('Event', secondary='event_service', back_populates='services')
 
 class Event(BasicModel):
     name = db.Column(db.String(100), nullable=False)
@@ -41,7 +35,7 @@ class Event(BasicModel):
     address = db.Column(db.String(600))
     is_obligatory = db.Column(db.Boolean)
     users = db.relationship('ApplicationUser', secondary='event_user', back_populates='events')
-    services = db.relationship('Service', secondary='event_service', back_populates='events')
+    services = db.relationship('Product', secondary='event_service', back_populates='events')
     client_id = db.Column(db.Integer, db.ForeignKey("client.id"))
     client = db.relationship("Client", back_populates="events")
     scheduled = db.relationship('ScheduledEvent', cascade="all, delete-orphan")
@@ -64,10 +58,10 @@ class EventUser(db.Model):
 
 class EventService(db.Model):
     event_id = db.Column(db.Integer, db.ForeignKey('event.id') ,primary_key=True)
-    service_id = db.Column(db.Integer, db.ForeignKey('service.id') ,primary_key=True)
+    product_id = db.Column(db.Integer, db.ForeignKey('product.id') ,primary_key=True)
 
 class ServiceClient(db.Model):
-    service_id = db.Column(db.Integer, db.ForeignKey('service.id') ,primary_key=True)
+    product_id = db.Column(db.Integer, db.ForeignKey('product.id') ,primary_key=True)
     client_id = db.Column(db.Integer, db.ForeignKey('client.id') ,primary_key=True)
     price = db.Column(db.Float) 
     is_programed = db.Column(db.Boolean)

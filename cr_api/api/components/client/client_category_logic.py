@@ -38,9 +38,9 @@ class ClientCategorysView(BaseLogicClass):
     @jwt_required()
     def post(self):
         acces_id = get_jwt_identity()
-        code = request.form.get("code") 
-        name = request.form.get("name") 
-        parent_id = request.form.get("parent_id") 
+        code = FormatValidator.getStrData(request.form.get("code") )
+        name = FormatValidator.getStrData(request.form.get("name") )
+        parent_id = FormatValidator.getStrData(request.form.get("parent_id") )
         new_category = ClientCategory(
             name = name,
             code = code,
@@ -70,7 +70,7 @@ class ClientCategoryTreeView(Resource):
         response = []
         if categories is not None:
             categorys = list(categories)
-            parent_categorys = [item for item in categorys if item["parent_id"] == 0]
+            parent_categorys = [item for item in categorys if item["parent_id"] == 0 or item["parent_id"] is None]
             response = buildCateoryTree(parent_categorys,categorys)
         return response,200
 
@@ -104,11 +104,13 @@ class ClientCategoryView(Resource):
         if profile is None:
             return response_util.performResponse(404,"No se puede encontrar el perfil!")
 
-        name = request.form.get("name")  
-        code = request.form.get("code")  
+        name = FormatValidator.getStrData(request.form.get("name") ) 
+        code = FormatValidator.getStrData(request.form.get("code"))  
+        parent_id = FormatValidator.getStrData(request.form.get("parent_id") )
         
-        profile.name = name if not FormatValidator.isNullOrEmpty(name) else type.name
-        profile.code = code if not FormatValidator.isNullOrEmpty(code) else type.code
+        profile.name = name
+        profile.code = code
+        profile.parent_id = parent_id
         validation = validator.validateCategoryData(profile)
         if validation.isValid:
             self.manager.put()
