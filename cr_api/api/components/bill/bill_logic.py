@@ -18,6 +18,24 @@ def sendDocument(bill:Bill):
     integrator = ContificoIntegrator()
 
     details = []
+    address = ""
+    addresses = bill.client.addresses
+    for item in  addresses:
+        if item.default:
+            address = item.address
+            break
+    if FormatValidator.isNullOrEmpty(address):
+        address = addresses[0].address
+
+    contact = ""
+    contacts = bill.client.contacts
+    for item in  contacts:
+        if item.default:
+            contact = item.contact
+            break
+    if FormatValidator.isNullOrEmpty(contact):
+        address = addresses[0].contact
+
 
     for detail in bill.details:
         det = {
@@ -26,25 +44,26 @@ def sendDocument(bill:Bill):
             "precio": detail.price,
             "porcentaje_iva": detail.iva,
             "porcentaje_descuento": detail.discount,
-            "base_cero":detail.quantity,
+            "base_cero":0,
             "base_gravable": detail.price,
-            "base_no_gravable": detail.quantity
+            "base_no_gravable": 0
         }
         details.append(det)
 
     obj_json = {
     "pos" : integrator.getAtribute("token"),
-    "fecha_emision": bill.issue_date,
-    "tipo_documento": bill.document_type,
+    "fecha_emision": bill.issue_date.strftime('%d/%m/%Y'),
+    "tipo_documento": bill.document_type.name,
+    "electronico" : True,
     "autorizacion": "",
     "documento": bill.document,
     "cliente": {
         "ruc": bill.client.ruc,
         "cedula": bill.client.identification,
         "razon_social": bill.client.identification,
-        "telefonos": "11111111",
-        "direccion": "AV. 99 DE OCTUBRE 729 Y BOYACA - GARCIA AVILES",
-        "tipo": bill.client.type,
+        "telefonos": address,
+        "direccion": contact,
+        "tipo": bill.client.type.name,
         "email": bill.client.email,
         "es_extranjero": bill.client.is_foreign
     },
@@ -59,6 +78,7 @@ def sendDocument(bill:Bill):
     "adicional2": "",
     "detalles": details
 }
+
     response = integrator.createBill(obj_json)
     return response
 
@@ -67,16 +87,18 @@ class BillsClientView(Resource):
         self.log = LoggerFactory().get_logger(self.__class__)
         self.manager= BillManager()
 
+    @jwt_required()
+    def get(self, id_client):
+        bills = self.manager.findClientBills(id_client)
+        return [bill_schema.dump(item) for item in bills],200
+    
 class BillsView(Resource):
     def __init__(self):
         self.log = LoggerFactory().get_logger(self.__class__)
         self.manager= BillManager()
 
     
-    @jwt_required()
-    def get(self, id_bill):
-        bills = self.manager.findClientBills(id_bill)
-        return [bill_schema.dump(item) for item in bills],200
+   
     
     @jwt_required()
     def post(self):
@@ -95,7 +117,7 @@ class BillsView(Resource):
         total = FormatValidator.getStrData(request.form.get("total"))
         details = FormatValidator.getStrData(request.form.get("details"))
 
-        sendDocument = FormatValidator.getBooleanFromString(request.form.get("send"))
+        send = FormatValidator.getBooleanFromString(request.form.get("send"))
         
         new_bill = Bill(
             issue_date= issue_date,
@@ -117,11 +139,10 @@ class BillsView(Resource):
         validation = validator.validateBillData(new_bill)
         if validation.isValid:
             self.manager.create(new_bill)
-            print(new_bill.id)
             data = FormatValidator.getObjectFromRquestJson(details)
             self.manager.appendDetails(new_bill.id,data)
             message = "Documento creado exitosamente!"
-            if sendDocument:
+            if send:
                 resp = sendDocument(new_bill)
                 if resp is not None:
                     message = "Documento creado y enviado exitosamente!" 

@@ -58,6 +58,5 @@ class ClientProductView(Resource):
 
     @jwt_required()
     def get(self, id_client):
-        print(id_client)
         return self.manager.findProductsAndAssignments(id_client)
     

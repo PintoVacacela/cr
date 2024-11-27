@@ -18,7 +18,7 @@ class Client(BasicModel):
     id_client=db.Column(db.String(16))
     type = db.Column(db.Enum(ClientType), default='N')
     ruc = db.Column(db.String(13))
-    identification = db.Column(db.String(10),unique=True, nullable=False)
+    identification = db.Column(db.String(10),unique=True)
     name = db.Column(db.String(300),nullable=False)
     comercial_name = db.Column(db.String(300))
     province = db.Column(db.String(50))

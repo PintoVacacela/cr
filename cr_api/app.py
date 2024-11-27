@@ -11,7 +11,7 @@ from api.components.menu.menu_logic import *
 from api.components.profile.profile_logic import *
 from api.components.product.product_logic import *
 from api.components.notification.notification_logic import *
-from api.components.event.event_logic import * 
+from api.components.event.event_logic import *
 from api.components.assignment.assignment_logic import *
 from api.components.bill.bill_logic import *
 
@@ -36,7 +36,8 @@ db.init_app(app)
 db.create_all()
 
 
-CORS(app, supports_credentials=True, resources={r"/api/*": {"origins": "http://localhost:4200"}})
+CORS(app, supports_credentials=True, resources={r"/*": {"origins": "http://3.149.239.60"}})
+
 
 api = Api(app)
 
@@ -95,7 +96,8 @@ api.add_resource(AssignmentsView, '/api/assignments')
 api.add_resource(ProductAssignmentsView, '/api/product_assignment/<string:id_client>')
 
 
-api.add_resource(BillsView, '/api/bills/<string:id_bill>')
+api.add_resource(BillsClientView, '/api/bills-client/<string:id_client>')
+api.add_resource(BillsView, '/api/bills')
 api.add_resource(BillView, '/api/bill/<string:id_bill>')
 
 
@@ -105,8 +107,7 @@ api.add_resource(BillView, '/api/bill/<string:id_bill>')
 
 
 
-socketio = SocketIO(app,  logger=False, engineio_logger=False,cors_allowed_origins=['http://localhost:4200'])
-
+socketio = SocketIO(app,  logger=False, engineio_logger=False,cors_allowed_origins=['http://3.149.239.60:4200'])
 
 init_socketio(socketio)
 
@@ -135,6 +136,6 @@ scheduler.start()
 
 if __name__ == "__main__":
     try:
-        socketio.run(app, host='0.0.0.0', port=5000)
+        socketio.run(app, host='0.0.0.0', port=5000, debug=True)
     except (KeyboardInterrupt, SystemExit):
         scheduler.shutdown()

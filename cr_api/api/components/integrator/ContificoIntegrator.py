@@ -2,11 +2,13 @@ import requests
 import json
 from ...model import *
 import traceback
+from ...utilities.loger import *
 
 class ContificoIntegrator ():
 
     def __init__(self):
-        with open('api/utilities/contifico/config_test.json') as arch:
+        self.log = LoggerFactory().get_logger(self.__class__)
+        with open('api/utilities/contifico/config.json') as arch:
                 self.contifico_config = json.load(arch)
         self.path = self.contifico_config["contifico_url"]
         self.key = self.contifico_config["contifico_key"]
@@ -45,7 +47,7 @@ class ContificoIntegrator ():
         
     def createBill(self, bill):
         try:
-            response = requests.get(self.path+"/producto/",json=bill, headers=self.header)
+            response = requests.post(self.path+"/documento/",json=bill, headers=self.header)
             response=response.json()
             return bill
         except Exception as e:
